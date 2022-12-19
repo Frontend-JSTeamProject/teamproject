@@ -21,7 +21,7 @@
 
     <!----------- main_top ----------->
 
-    <main>
+    <main id="main">
       <article id="main_top_container">
         <!-- scroll icon -->
         <div class="scroll">
@@ -42,11 +42,13 @@
           <div class="top_bg_wrapper">
             <div class="top_bg_left"></div>
             <div class="top_bg_right">
-              <video src="../images/index_1/main-vi01.mp4" autoplay loop muted></video>
-              <video src="../images/index_1/main-vi02.mp4" autoplay loop muted></video>
-              <video src="../images/index_1/main-vi03.mp4" autoplay loop muted></video>
-              <video src="../images/index_1/main-vi04.mp4" autoplay loop muted></video>
-              <video src="../images/index_1/main-vi05mp4" autoplay loop muted></video>
+              <div class="video_wrapper">
+                <video src="../images/index_1/main-vi01.mp4" autoplay loop muted></video>
+                <video src="../images/index_1/main-vi02.mp4" autoplay loop muted></video>
+                <video src="../images/index_1/main-vi03.mp4" autoplay loop muted></video>
+                <video src="../images/index_1/main-vi04.mp4" autoplay loop muted></video>
+                <video src="../images/index_1/main-vi05mp4" autoplay loop muted></video>
+              </div>
             </div>
           </div>
         </div>
@@ -65,79 +67,83 @@
         <div class="highlights_inner">
           <h2>HIGHLIGHTS</h2>
           <!-- slide list1 -->
-          <div id="highlights_slide1" class="hl_slide">
-            <ul class="hl_slide_list">
-              <li>
-                <a href="https://www.hwawoo.com/kor/insights/newsletter/11165?currentPage=1">
-                  <h3>LEGAL UPDATE</h3>
-                  <img src="../images/index_1/highlights01.png" alt="LEGAL UPDATE" />
-                  <div class="content_info">
-                    <span>화우소식</span>
-                    <p>개인정보보호법 개정안 통과 초읽기 들어가</p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.hwawoo.com/kor/insights/seminar/11153?currentPage=1">
-                  <h3>SEMINAR</h3>
-                  <img src="../images/index_1/highlights02.png" alt="SEMINAR" />
-                  <div class="content_info">
-                    <span>접수중</span>
-                    <p>부실PF사업장에서의 ‘대주’의 대응 관련 세미나</p>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <!-- slide list2 -->
-          <div id="highlights_slide2" class="hl_slide">
-            <ul class="hl_slide_list">
-              <li>
-                <a href="https://www.hwawoo.com/kor/insights/seminar/11152?currentPage=1">
-                  <h3>SEMINAR</h3>
-                  <img src="../images/index_1/highlights03.png" alt="SEMINAR" />
-                  <div class="content_info">
-                    <span>접수중</span>
-                    <p>부실PF사업장에서의 ‘시공사’의 대응 관련 세미나</p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="https://www.hwawoo.com/kor/insights/hwawoo-news/11128?currentPage=1">
-                  <h3>SUPER 30 LAWYERS</h3>
-                  <img src="../images/index_1/highlights04.png" alt="SUPER 30 LAWYERS" />
-                  <div class="content_info">
-                    <span>화우소식</span>
-                    <p>ALB Korea Super 30 Lawyers에 3명 변호사 선정</p>
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <!-- slide list3 -->
-          <div id="highlights_slide3" class="hl_slide">
-            <ul class="hl_slide_list">
-              <li>
-                <a href="https://www.fnnews.com/news/202210131815577583" target="_blank">
-                  <h3>PRESS</h3>
-                  <img src="../images/index_1/highlights01.png" alt="PRESS" />
-                  <div class="content_info">
-                    <span>파이낸셜뉴스 외 41건</span>
-                    <p>화우 '중대재해법' 위헌법률심판 제청</p>
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="hhttps://www.hwawoo.com/kor/insights/work-case/10950?currentPage=1">
-                  <h3>RECENT MATTER</h3>
-                  <img src="../images/index_1/highlights02.png" alt="RECENT MATTER" />
-                  <div class="content_info">
-                    <span>화우소식</span>
-                    <p>메디톡스, 법무법인 화우 만나 기사회생, 17전 16승</p>
-                  </div>
-                </a>
-              </li>
-            </ul>
+          <div class="highlights_slide_container">
+            <div class="highlights_slide_wrapper">
+              <div id="highlights_slide1" class="hl_slide">
+                <ul class="hl_slide_list">
+                  <li>
+                    <a href="https://www.hwawoo.com/kor/insights/newsletter/11165?currentPage=1">
+                      <h3>LEGAL UPDATE</h3>
+                      <img src="../images/index_1/highlights01.png" alt="LEGAL UPDATE" />
+                      <div class="content_info">
+                        <span>화우소식</span>
+                        <p>개인정보보호법 개정안 통과 초읽기 들어가</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.hwawoo.com/kor/insights/seminar/11153?currentPage=1">
+                      <h3>SEMINAR</h3>
+                      <img src="../images/index_1/highlights02.png" alt="SEMINAR" />
+                      <div class="content_info">
+                        <span>접수중</span>
+                        <p>부실PF사업장에서의 ‘대주’의 대응 관련 세미나</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- slide list2 -->
+              <div id="highlights_slide2" class="hl_slide">
+                <ul class="hl_slide_list">
+                  <li>
+                    <a href="https://www.hwawoo.com/kor/insights/seminar/11152?currentPage=1">
+                      <h3>SEMINAR</h3>
+                      <img src="../images/index_1/highlights03.png" alt="SEMINAR" />
+                      <div class="content_info">
+                        <span>접수중</span>
+                        <p>부실PF사업장에서의 ‘시공사’의 대응 관련 세미나</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.hwawoo.com/kor/insights/hwawoo-news/11128?currentPage=1">
+                      <h3>SUPER 30 LAWYERS</h3>
+                      <img src="../images/index_1/highlights04.png" alt="SUPER 30 LAWYERS" />
+                      <div class="content_info">
+                        <span>화우소식</span>
+                        <p>ALB Korea Super 30 Lawyers에 3명 변호사 선정</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- slide list3 -->
+              <div id="highlights_slide3" class="hl_slide">
+                <ul class="hl_slide_list">
+                  <li>
+                    <a href="https://www.fnnews.com/news/202210131815577583" target="_blank">
+                      <h3>PRESS</h3>
+                      <img src="../images/index_1/highlights01.png" alt="PRESS" />
+                      <div class="content_info">
+                        <span>파이낸셜뉴스 외 41건</span>
+                        <p>화우 '중대재해법' 위헌법률심판 제청</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="hhttps://www.hwawoo.com/kor/insights/work-case/10950?currentPage=1">
+                      <h3>RECENT MATTER</h3>
+                      <img src="../images/index_1/highlights02.png" alt="RECENT MATTER" />
+                      <div class="content_info">
+                        <span>화우소식</span>
+                        <p>메디톡스, 법무법인 화우 만나 기사회생, 17전 16승</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
           <!-- scrollbar -->
           <div class="scrollbar">
