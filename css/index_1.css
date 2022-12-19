@@ -1,5 +1,115 @@
 @charset "utf-8";
 
-#main_top_container .top_inner .top_txt_wrapper .top_txt {
-  font-family: 'Lora';
+/* 공통 */
+body {
+  font-family: 'NotoSansCJKkr', 'Malgun Gothic', '맑은 고딕', '돋움', Dotum, '굴림', Gulim, Tahoma,
+    Verdana, Geneva, sans-serif, Apple Gothic, AppleGothic;
+  color: #1c1c1c;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/************** header **************/
+header {
+  height: 100px;
+  width: 100%;
+}
+
+/************** main **************/
+/* main {
+  width: 100%;
+  margin: 0 auto;
+} */
+/************** main_top **************/
+main #main_top_container {
+  width: 100vw;
+  position: relative;
+}
+main #main_top_container .top_inner {
+  margin: 80px auto;
+  width: 100%;
+
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+}
+
+/***** scroll icon *****/
+
+#main_top_container .scroll {
+  /* height: 150px; */
+  position: absolute;
+  right: 22px;
+  top: 500px;
+}
+#main_top_container .scroll span {
+  width: 90px;
+  font-family: 'Lora';
+  font-size: 16px;
+  font-weight: 400px;
+  transform: rotate(-90deg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#main_top_container .scroll span::before {
+  content: '';
+  width: 30px;
+  height: 45px;
+  background: url(../images/index_1/ico-scroll-arrow.svg) no-repeat center / contain;
+  transform: rotate(90deg);
+}
+#main_top_container .top_inner .top_txt_wrapper {
+  position: absolute;
+  left: 20%;
+  top: 20%;
+}
+#main_top_container .top_inner .top_txt_wrapper .top_txt_box {
+  display: flex;
+  flex-direction: column;
+}
+#main_top_container .top_txt {
+  font-family: 'Lora';
+  font-size: 120px;
+  font-weight: 700;
+}
+#main_top_container .top_inner .top_bg_wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+#main_top_container .top_inner .top_bg_wrapper > div {
+  min-width: 636px;
+  max-width: 636px;
+  height: 636px;
+  border-radius: 50%;
+}
+#main_top_container .top_inner .top_bg_wrapper .top_bg_left {
+  border: 1px solid rgb(28, 28, 28);
+}
+#main_top_container .top_inner .top_bg_wrapper .top_bg_right {
+  display: flex;
+  overflow: hidden;
+  transform: translate(-20%, 20%);
+}
+#main_top_container .top_inner .top_bg_wrapper .top_bg_right video {
+  object-fit: cover;
+}
+/************** main_highlights **************/
+
+#main_highlights .highlights_inner h2 {
+  font-family: 'Lora';
+  font-size: 100px;
+  font-weight: 700;
+}
+#main_highlights .highlights_inner .hl_slide .hl_slide_list li a h3 {
+  font-family: 'Lora';
+  font-size: 32px;
+  font-weight: 600;
+}
+/************** main_centers **************/
+/************** footer **************/
