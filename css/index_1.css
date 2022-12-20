@@ -5,6 +5,8 @@ body {
   font-family: 'NotoSansCJKkr', 'Malgun Gothic', '맑은 고딕', '돋움', Dotum, '굴림', Gulim, Tahoma,
     Verdana, Geneva, sans-serif, Apple Gothic, AppleGothic;
   color: #1c1c1c;
+}
+img {
   vertical-align: middle;
 }
 a {
@@ -26,20 +28,17 @@ header {
 #main {
   position: relative;
   min-height: 100vh;
-  padding: 88px 0 572px;
-  margin-bottom: -572px;
-  overflow: hidden;
+  padding: 88px 0 0;
+  /* margin-bottom: -572px; */
 }
-/************** main_top **************/
 
+/************** main_top **************/
 #main #main_top_container {
   padding: 80px 0 250px;
   position: relative;
-  
 }
 
-/* scroll icon */
-
+/* 스크롤 아이콘 */
 #main_top_container .scroll {
   position: absolute;
   right: 0;
@@ -63,7 +62,7 @@ header {
   transform: rotate(90deg);
 }
 
-/* top_inner */
+/* main_top_inner */
 #main #main_top_container .top_inner {
   width: 100%;
   max-width: 1600px;
@@ -113,6 +112,8 @@ header {
   opacity: 1;
   transform: translateZ(0); */
 }
+
+/* main_top_배경 */
 #main_top_container .top_inner .top_bg_wrapper {
   width: 1600px;
   padding-left: 416px;
@@ -160,20 +161,25 @@ header {
 #main_highlights {
   position: relative;
   padding: 80px 0 165px;
+  overflow: hidden;
 }
+
+/* main_highlights_배경 */
 #main_highlights .highlights_bg {
   background-color: rgba(245, 245, 245, 0.6);
-  width: 1760px;
+  width: 100%;
   height: 1760px;
   border-radius: 50%;
   position: absolute;
   left: 0;
   top: 0;
 }
+
+/* main_highlights_배경 글자 */
 #main_highlights .highlights_flow_txt {
   position: absolute;
   top: 35%;
-  /* right: -70%; */
+  right: -70%;
   z-index: -1;
 }
 #main_highlights .highlights_flow_txt span {
@@ -181,10 +187,10 @@ header {
   font-family: 'Lora', serif;
   font-weight: 400;
   font-size: 200px;
-  color: rgba(221,221,221,.5);
+  line-height: 1.05;
+  color: rgba(221, 221, 221, 0.5);
   white-space: nowrap;
   cursor: default;
- 
 }
 #main_highlights .highlights_flow_txt span:last-child {
   padding-left: 580px;
@@ -195,6 +201,8 @@ header {
   margin: 0 auto;
   position: relative;
 }
+
+/* main_highlights_타이틀 */
 #main_highlights .highlights_inner h2 {
   font-family: 'Lora';
   font-size: 100px;
@@ -213,14 +221,12 @@ header {
   border-radius: 50%;
   box-sizing: border-box;
 }
+
+/* main_highlights_슬라이드 */
 #main_highlights .highlights_slide_container {
   width: 1192px;
   margin: 0 0 0 auto;
-}
-#main_highlights .highlights_inner .highlights_slide_wrapper .hl_slide_list li a h3 {
-  font-family: 'Lora';
-  font-size: 32px;
-  font-weight: 600;
+  overflow: hidden;
 }
 #main_highlights .highlights_slide_wrapper {
   width: 100%;
@@ -249,5 +255,163 @@ header {
   width: 512px;
   display: block;
 }
+#main_highlights .highlights_inner .highlights_slide_wrapper .hl_slide_list li a h3 {
+  font-family: 'Lora';
+  font-size: 32px;
+  font-weight: 600;
+  text-align: right;
+
+  position: absolute;
+  left: -184px;
+  top: 165px;
+  width: 367px;
+  transform: rotate(-90deg);
+}
+#main_highlights .highlights_inner .highlights_slide_wrapper .hl_slide_list .content_info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 24px;
+}
+#main_highlights .highlights_inner .highlights_slide_wrapper .hl_slide_list li a span {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #999;
+}
+#main_highlights .highlights_inner .highlights_slide_wrapper .hl_slide_list li a p {
+  height: 68px;
+
+  text-overflow: ellipsis;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.4;
+  letter-spacing: -0.1px;
+}
+
+/* 슬라이드 스크롤바 */
+#main_highlights .hl_scrollbar_wrapper {
+  padding: 55px 0 16px;
+  overflow: hidden;
+}
+#main_highlights .hl_scrollbar_wrapper .hl_scrollbar {
+  background: #ddd;
+}
+#main_highlights .hl_scrollbar_wrapper .hl_scrollbar .hl_scrollbar_drag {
+  width: 763.905px;
+  height: 2px;
+  background: #222;
+  position: relative;
+}
+#main_highlights .hl_scrollbar_wrapper .hl_scrollbar .hl_scrollbar_drag::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: #222;
+  width: 2000px;
+  margin-left: -2000px;
+}
+#main_highlights .hl_scrollbar_wrapper .hl_scrollbar .hl_scrollbar_drag::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background: url(../images/index_1/ico-drag.svg) no-repeat center / contain;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
 /************** main_centers **************/
+#main_centers {
+  position: relative;
+  padding-bottom: 150px;
+  overflow: hidden;
+}
+#main_centers .centers_flow_txt {
+  position: absolute;
+  top: 35%;
+  right: -70%;
+  z-index: -1;
+}
+#main_centers .centers_flow_txt span {
+  display: block;
+  font-family: 'Lora', serif;
+  font-weight: 400;
+  font-size: 200px;
+  line-height: 1.05;
+  color: rgba(221, 221, 221, 0.5);
+  white-space: nowrap;
+  cursor: default;
+}
+#main_centers .centers_flow_txt span:last-child {
+  padding: 420px 0 0 580px;
+}
+#main_centers .centers_inner {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* main_centers_타이틀 */
+#main_centers .centers_inner h2 {
+  font-family: 'Lora';
+  font-size: 100px;
+  font-weight: 700;
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  line-height: 1;
+  margin-bottom: 80px;
+}
+#main_centers .centers_inner h2::after {
+  content: '';
+  width: 16px;
+  height: 16px;
+  margin-bottom: 7px;
+  background-color: #ffe141;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+#main_centers .centers_inner .centers_slide_wrap {
+  width: 9600px;
+}
+#main_centers .centers_inner .centers_slide_wrap .centers_slide_container {
+  width: 1600px;
+  height: 783px;
+  position: relative;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  overflow: hidden;
+  /* opacity: 1; */
+}
+#main_centers .centers_inner .centers_slide_wrap .slide_box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#main_centers .centers_inner .centers_slide_wrap .info {
+  width: 648px;
+  border: 1px solid #1c1c1c;
+  background-color: #fff;
+  padding: 70px 60px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+
+  transition: 1s 0.8s;
+  transform: translate3d(0, -50%, 0);
+}
+
+#main_centers .centers_slide_wrap .btn .prev {
+  background: url(../images/index_1/ico-arrow-left.svg) no-repeat 50% / contain;
+}
 /************** footer **************/
