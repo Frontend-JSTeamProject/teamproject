@@ -11,8 +11,12 @@
     <link rel="stylesheet" href="../common/minireset.min.css" />
     <!-- fonts -->
     <link rel="stylesheet" href="../common/fonts.css" />
+    <!-- aos -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- style -->
     <link rel="stylesheet" href="../css/index_1.css" />
+    <!-- js -->
+    <script defer src="../js/index_1.js"></script>
   </head>
   <body>
     <!--------------------- header --------------------->
@@ -32,22 +36,26 @@
           <!-- text -->
           <div class="top_txt_wrapper">
             <div class="top_txt_box">
-              <span id="top_txt1" class="top_txt">Focus</span>
-              <span id="top_txt2" class="top_txt">Strategy</span>
-              <span id="top_txt3" class="top_txt">Results</span>
+              <span id="top_txt1" class="top_txt" data-aos="fade-right" data-aos-duration="1000">Focus</span>
+              <span id="top_txt2" class="top_txt" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">Strategy</span>
+              <span id="top_txt3" class="top_txt" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600">Results</span>
             </div>
-            <p>최적의 솔루션을 제공합니다.</p>
+            <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="900">최적의 솔루션을 제공합니다.</p>
           </div>
           <!-- background -->
-          <div class="top_bg_wrapper">
+          <div class="top_bg_wrapper" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
             <div class="top_bg_left"></div>
             <div class="top_bg_right">
               <div class="video_wrapper">
-                <video src="../images/index_1/main-vi01.mp4" autoplay loop muted></video>
+                <video src="../images/index_1/main-vi01.mp4" class="active" autoplay loop muted></video>
                 <video src="../images/index_1/main-vi02.mp4" autoplay loop muted></video>
                 <video src="../images/index_1/main-vi03.mp4" autoplay loop muted></video>
                 <video src="../images/index_1/main-vi04.mp4" autoplay loop muted></video>
-                <video src="../images/index_1/main-vi05mp4" autoplay loop muted></video>
+                <video src="../images/index_1/main-vi05.mp4" autoplay loop muted></video>
+                <ul id="top_video_btn">
+                  <li id="top_video_prev_btn"></li>
+                  <li id="top_video_next_btn"></li>
+                </ul>
               </div>
             </div>
           </div>
@@ -194,7 +202,7 @@
                     </div>
                     <div class="view_all">
                       <a href="https://www.hwawoo.com/kor/solutions/sector/149">
-                        <div class="circle"></div>
+                        <i></i>
                         VIEW ALL
                       </a>
                     </div>
@@ -382,5 +390,9 @@
     </main>
 
     <!--------------------- footer --------------------->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
