@@ -61,7 +61,7 @@ mainTitle1.forEach(el => mainObserver1.observe(el));
 const mainOptions2 = {
   root: null,
   rootMargin: '0px',
-  threshold: 0.05,
+  threshold: 0.1,
 };
 
 const mainObserver2 = new IntersectionObserver(entries => {
@@ -125,14 +125,33 @@ hlSlideScrollBtn.addEventListener('mousedown', e => {
   }
 });
 
+// 스크롤 이벤트3
+const mainOptions3 = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.05,
+};
+
+const mainObserver3 = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+    }
+  });
+}, mainOptions3);
+// main_center 스크롤 이벤트
+const centerSlideScrolls = document.querySelectorAll('#main_centers .centers_inner .centers_slide_wrap .centers_slide_container');
+
+centerSlideScrolls.forEach(el => mainObserver3.observe(el));
+
 // main_center 슬라이드
 const centerSlides = document.querySelectorAll(
   '#main_centers .centers_inner .centers_slide_wrap .slide_box'
 );
-const centerPrevBtn = document.querySelector(
+const centerPrevBtns = document.querySelectorAll(
   '#main_centers .centers_slide_wrap .btn .slide_btn .prev'
 );
-const centerNextBtn = document.querySelector(
+const centerNextBtns = document.querySelectorAll(
   '#main_centers .centers_slide_wrap .btn .slide_btn .next'
 );
 const centerSlideInfoes = document.querySelectorAll(
@@ -140,47 +159,160 @@ const centerSlideInfoes = document.querySelectorAll(
 );
 
 console.log(centerSlides);
-console.log(centerPrevBtn);
-console.log(centerNextBtn);
+console.log(centerPrevBtns);
+console.log(centerNextBtns);
 console.log(centerSlideInfoes);
 
 // 스와이프 전체
-(function centerSlide() {
-  let i = 0;
-  centerPrevBtn.addEventListener('click', () => {
-    centerSlides[i].classList.remove('active');
-    i--;
-    i < 0 ? (i = centerSlides.length - 1) : false;
-    centerSlides[i].classList.add('active');
-  });
-  centerNextBtn.addEventListener('click', () => {
-    centerSlides[i].classList.remove('active');
-    i++;
-    if (i >= centerSlides.length) {
-      i = 0;
-    }
-    centerSlides[i].classList.add('active');
-  });
-})();
+// const centerSlideMove1 = () => {
+//   let i = 0;
+//   centerSlides[i].classList.remove('active');
+//   i--;
+//   i < 0 ? (i = centerSlides.length - 1) : false;
+//   centerSlides[i].classList.add('active');
+// };
+
+// const centerSlideMove2 = () => {
+//   let i = 0;
+//   centerSlides[i].classList.remove('active');
+//   i++;
+//   if (i >= centerSlides.length) {
+//     i = 0;
+//   }
+//   centerSlides[i].classList.add('active');
+// };
+
+// centerPrevBtns.forEach(btn => {
+//   btn.addEventListener('click', centerSlideMove1);
+// });
+// centerNextBtns.forEach(btn => {
+//   btn.addEventListener('click', centerSlideMove2);
+// });
+
+// center 슬라이드 뒤로 버튼
+centerPrevBtns[0].addEventListener('click', () => {
+  centerSlides[0].classList.remove('active');
+  centerSlides[5].classList.add('active');
+});
+centerPrevBtns[5].addEventListener('click', () => {
+  centerSlides[5].classList.remove('active');
+  centerSlides[4].classList.add('active');
+});
+centerPrevBtns[4].addEventListener('click', () => {
+  centerSlides[4].classList.remove('active');
+  centerSlides[3].classList.add('active');
+});
+centerPrevBtns[3].addEventListener('click', () => {
+  centerSlides[3].classList.remove('active');
+  centerSlides[2].classList.add('active');
+});
+centerPrevBtns[2].addEventListener('click', () => {
+  centerSlides[2].classList.remove('active');
+  centerSlides[1].classList.add('active');
+});
+centerPrevBtns[1].addEventListener('click', () => {
+  centerSlides[1].classList.remove('active');
+  centerSlides[0].classList.add('active');
+});
+
+// center 슬라이드 앞으로 버튼
+centerNextBtns[0].addEventListener('click', () => {
+  centerSlides[0].classList.remove('active');
+  centerSlides[1].classList.add('active');
+});
+centerNextBtns[1].addEventListener('click', () => {
+  centerSlides[1].classList.remove('active');
+  centerSlides[2].classList.add('active');
+});
+centerNextBtns[2].addEventListener('click', () => {
+  centerSlides[2].classList.remove('active');
+  centerSlides[3].classList.add('active');
+});
+centerNextBtns[3].addEventListener('click', () => {
+  centerSlides[3].classList.remove('active');
+  centerSlides[4].classList.add('active');
+});
+centerNextBtns[4].addEventListener('click', () => {
+  centerSlides[4].classList.remove('active');
+  centerSlides[5].classList.add('active');
+});
+centerNextBtns[5].addEventListener('click', () => {
+  centerSlides[5].classList.remove('active');
+  centerSlides[0].classList.add('active');
+});
 
 // info 움직임
-(function centerSlideInfo() {
-  let i = 0;
-  centerPrevBtn.addEventListener('click', () => {
-    centerSlideInfoes[i].classList.remove('active');
-    i--;
-    i < 0 ? (i = centerSlideInfoes.length - 1) : false;
-    centerSlideInfoes[i].classList.add('active');
-  });
-  centerNextBtn.addEventListener('click', () => {
-    centerSlideInfoes[i].classList.remove('active');
-    i++;
-    if (i >= centerSlideInfoes.length) {
-      i = 0;
-    }
-    centerSlideInfoes[i].classList.add('active');
-  });
-})();
+/* 
+  (function centerSlideInfoMove() {
+    let i = 0;
+    centerPrevBtns[i].addEventListener('click', () => {
+      centerSlideInfoes[i].classList.remove('active');
+      i--;
+      i < 0 ? (i = centerSlideInfoes.length - 1) : false;
+      centerSlideInfoes[i].classList.add('active');
+    });
+    centerNextBtns[i].addEventListener('click', () => {
+      centerSlideInfoes[i].classList.remove('active');
+      i++;
+      if (i >= centerSlideInfoes.length) {
+        i = 0;
+      }
+      centerSlideInfoes[i].classList.add('active');
+    });
+  })(); 
+*/
+
+centerPrevBtns[0].addEventListener('click', () => {
+  centerSlideInfoes[0].classList.remove('active');
+  centerSlideInfoes[5].classList.add('active');
+});
+centerPrevBtns[5].addEventListener('click', () => {
+  centerSlideInfoes[5].classList.remove('active');
+  centerSlideInfoes[4].classList.add('active');
+});
+centerPrevBtns[4].addEventListener('click', () => {
+  centerSlideInfoes[4].classList.remove('active');
+  centerSlideInfoes[3].classList.add('active');
+});
+centerPrevBtns[3].addEventListener('click', () => {
+  centerSlideInfoes[3].classList.remove('active');
+  centerSlideInfoes[2].classList.add('active');
+});
+centerPrevBtns[2].addEventListener('click', () => {
+  centerSlideInfoes[2].classList.remove('active');
+  centerSlideInfoes[1].classList.add('active');
+});
+centerPrevBtns[1].addEventListener('click', () => {
+  centerSlideInfoes[1].classList.remove('active');
+  centerSlideInfoes[0].classList.add('active');
+});
+
+
+
+centerNextBtns[0].addEventListener('click', () => {
+  centerSlideInfoes[0].classList.remove('active');
+  centerSlideInfoes[1].classList.add('active');
+});
+centerNextBtns[1].addEventListener('click', () => {
+  centerSlideInfoes[1].classList.remove('active');
+  centerSlideInfoes[2].classList.add('active');
+});
+centerNextBtns[2].addEventListener('click', () => {
+  centerSlideInfoes[2].classList.remove('active');
+  centerSlideInfoes[3].classList.add('active');
+});
+centerNextBtns[3].addEventListener('click', () => {
+  centerSlideInfoes[3].classList.remove('active');
+  centerSlideInfoes[4].classList.add('active');
+});
+centerNextBtns[4].addEventListener('click', () => {
+  centerSlideInfoes[4].classList.remove('active');
+  centerSlideInfoes[5].classList.add('active');
+});
+centerNextBtns[5].addEventListener('click', () => {
+  centerSlideInfoes[5].classList.remove('active');
+  centerSlideInfoes[0].classList.add('active');
+});
 
 // main_centers 배경 텍스트
 const centerBgTxt = document.querySelector('#main_centers .centers_flow_txt');
