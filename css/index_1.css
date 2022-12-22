@@ -24,10 +24,27 @@ header {
   z-index: 10;
 }
 
+/* progress bar */
+.progressBar_wrapper {
+  position: fixed;
+  top: 50%;
+  left: 36px;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 200px;
+  z-index: 10;
+  background-color: #222;
+}
+.progressBar {
+  width: 100%;
+  height: 0;
+  background-color: #ffe141;
+}
+
 /************** main **************/
 #main {
   position: relative;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   padding: 88px 0 0;
   /* margin-bottom: -572px; */
 }
@@ -572,7 +589,6 @@ header {
   margin-top: -24px;
   border-radius: 200px;
   background-color: #ffe141;
-  
 }
 #main_centers
   > .centers_inner
@@ -584,8 +600,8 @@ header {
   > .view_all
   > a:hover
   > i {
-  animation: center_i_mov 1s forwards;
-  }
+  /* animation: center_i_mov 1s forwards; */
+}
 @keyframes center_i_mov {
   0% {
     transform: translate(0, 0);
@@ -597,7 +613,7 @@ header {
   }
   100% {
     width: 48px;
-    transform: translate(110px, 0) 
+    transform: translate(110px, 0);
   }
 }
 #main_centers .centers_slide_wrap .btn .view_all a::after {

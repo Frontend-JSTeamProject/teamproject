@@ -1,3 +1,20 @@
+// progressBar
+const progressBar = document.querySelector('.progressBar');
+
+addEventListener('scroll', progress);
+
+function progress() {
+  let winScrollTop = document.documentElement.scrollTop;
+  console.log(`스크롤한 거리:`, winScrollTop);
+  const scrollHt = document.documentElement.scrollHeight;
+  const clientHt = document.documentElement.clientHeight;
+  console.log(scrollHt, clientHt);
+  let height = (winScrollTop / (scrollHt - clientHt)) * 100;
+  console.log(height);
+
+  progressBar.style.height = height + `%`;
+}
+
 // Top_비디오 자동 슬라이드
 const mainTopVideos = document.querySelectorAll('#main_top_container .video_wrapper video');
 const mainTopPrevBtn = document.querySelector('#top_video_prev_btn');
@@ -140,7 +157,9 @@ const mainObserver3 = new IntersectionObserver(entries => {
   });
 }, mainOptions3);
 // main_center 스크롤 이벤트
-const centerSlideScrolls = document.querySelectorAll('#main_centers .centers_inner .centers_slide_wrap .centers_slide_container');
+const centerSlideScrolls = document.querySelectorAll(
+  '#main_centers .centers_inner .centers_slide_wrap .centers_slide_container'
+);
 
 centerSlideScrolls.forEach(el => mainObserver3.observe(el));
 
@@ -164,30 +183,32 @@ console.log(centerNextBtns);
 console.log(centerSlideInfoes);
 
 // 스와이프 전체
-// const centerSlideMove1 = () => {
-//   let i = 0;
-//   centerSlides[i].classList.remove('active');
-//   i--;
-//   i < 0 ? (i = centerSlides.length - 1) : false;
-//   centerSlides[i].classList.add('active');
-// };
+/* 
+  const centerSlideMove1 = () => {
+    let i = 0;
+    centerSlides[i].classList.remove('active');
+    i--;
+    i < 0 ? (i = centerSlides.length - 1) : false;
+    centerSlides[i].classList.add('active');
+  };
 
-// const centerSlideMove2 = () => {
-//   let i = 0;
-//   centerSlides[i].classList.remove('active');
-//   i++;
-//   if (i >= centerSlides.length) {
-//     i = 0;
-//   }
-//   centerSlides[i].classList.add('active');
-// };
+  const centerSlideMove2 = () => {
+    let i = 0;
+    centerSlides[i].classList.remove('active');
+    i++;
+    if (i >= centerSlides.length) {
+      i = 0;
+    }
+    centerSlides[i].classList.add('active');
+  };
 
-// centerPrevBtns.forEach(btn => {
-//   btn.addEventListener('click', centerSlideMove1);
-// });
-// centerNextBtns.forEach(btn => {
-//   btn.addEventListener('click', centerSlideMove2);
-// });
+  centerPrevBtns.forEach(btn => {
+    btn.addEventListener('click', centerSlideMove1);
+  });
+  centerNextBtns.forEach(btn => {
+    btn.addEventListener('click', centerSlideMove2);
+  }); 
+*/
 
 // center 슬라이드 뒤로 버튼
 centerPrevBtns[0].addEventListener('click', () => {
@@ -262,6 +283,7 @@ centerNextBtns[5].addEventListener('click', () => {
   })(); 
 */
 
+// 뒤로 버튼 눌렀을 때 info 효과
 centerPrevBtns[0].addEventListener('click', () => {
   centerSlideInfoes[0].classList.remove('active');
   centerSlideInfoes[5].classList.add('active');
@@ -287,8 +309,7 @@ centerPrevBtns[1].addEventListener('click', () => {
   centerSlideInfoes[0].classList.add('active');
 });
 
-
-
+// 앞으로 버튼 눌렀을 때 info 효과
 centerNextBtns[0].addEventListener('click', () => {
   centerSlideInfoes[0].classList.remove('active');
   centerSlideInfoes[1].classList.add('active');
@@ -312,6 +333,52 @@ centerNextBtns[4].addEventListener('click', () => {
 centerNextBtns[5].addEventListener('click', () => {
   centerSlideInfoes[5].classList.remove('active');
   centerSlideInfoes[0].classList.add('active');
+});
+
+// view_all
+const viewAllMoves = document.querySelectorAll(
+  '#main_centers > .centers_inner > .centers_slide_wrap > .centers_slide_container > .slide_box > .info > .btn > .view_all > a'
+);
+const viewAllBtns = document.querySelectorAll(
+  '#main_centers > .centers_inner > .centers_slide_wrap > .centers_slide_container > .slide_box > .info > .btn > .view_all > a > i'
+);
+
+// 마우스 올렸을 때
+viewAllMoves.forEach(move => {
+  move.addEventListener('mouseover', () => {
+    viewAllBtns.forEach(el => {
+      el.animate(
+        {
+          transform: ['translateX(0)', 'translateX(0)', 'translateX(110px)'],
+          width: ['48px', '140px', '48px'],
+        },
+        {
+          duration: 1000,
+          easing: 'ease',
+          fill: 'forwards',
+        }
+      );
+    });
+  });
+});
+
+// 마우스 뗐을 때
+viewAllMoves.forEach(move => {
+  move.addEventListener('mouseout', () => {
+    viewAllBtns.forEach(el => {
+      el.animate(
+        {
+          transform: ['translateX(110px)', 'translateX(0)', 'translateX(0)'],
+          width: ['48px', '140px', '48px'],
+        },
+        {
+          duration: 1000,
+          easing: 'ease',
+          fill: 'forwards',
+        }
+      );
+    });
+  });
 });
 
 // main_centers 배경 텍스트
