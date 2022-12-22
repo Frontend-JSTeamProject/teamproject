@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: NotoSansCJKkr;
+    font-weight: 900;
+    font-display: swap;
+    src: url(./fonts/NotoSansCJKkr-Black.otf) format("opentype")
+}
+
+@font-face {
+    font-family: NotoSansCJKkr;
+    font-weight: 700;
+    font-display: swap;
+    src: url(./fonts/NotoSansCJKkr-Bold.otf) format("opentype")
+}
+
+@font-face {
+    font-family: NotoSansCJKkr;
+    font-weight: 500;
+    font-display: swap;
+    src: url(./fonts/NotoSansCJKkr-Medium.otf) format("opentype")
+}
+
+@font-face {
+    font-family: NotoSansCJKkr;
+    font-weight: 400;
+    font-display: swap;
+    src: url(./fonts/NotoSansCJKkr-Regular.otf) format("opentype")
+}
+
+
+@font-face {
+    font-family: Lora;
+    font-weight: 700;
+    font-display: swap;
+    src:url(./fonts/Lora-Bold.ttf) format("opentype")
+}
+
+@font-face {
+    font-family: Lora;
+    font-weight: 600;
+    font-display: swap;
+    src:url(./fonts/Lora-SemiBold.ttf) format("opentype")
+}
+
+@font-face {
+    font-family: Lora;
+    font-weight: 500;
+    font-display: swap;
+    src:url(./fonts/Lora-Medium.ttf) format("opentype")
+}
+
+@font-face {
+    font-family: Lora;
+    font-weight: 400;
+    font-display: swap;
+    src:url(./fonts/Lora-Regular.ttf) format("opentype")
+}
