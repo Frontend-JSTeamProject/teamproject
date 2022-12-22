@@ -1,0 +1,402 @@
+@charset 'utf-8';
+body{
+  font-family: 'NotoSansCJKkr',"Malgun Gothic","맑은 고딕","돋움",Dotum,"굴림",Gulim,Tahoma,Verdana,Geneva,sans-serif,Apple Gothic,AppleGothic;
+   color: #1c1c1c;
+  /* font-size: 1.6rem; */
+  font-weight: 400;
+  letter-spacing: 0;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 상단 헤더 */
+
+.mainfooter .footer_box a {
+  width: 60px; 
+  height: 60px;
+  position: fixed;
+  z-index:9999;
+  right: 60px;
+  bottom: 60px;
+  background-image: url(./images/arrow_top.png);
+  background-size: 100%;
+}
+
+.cover{
+  background-image:url(./images/professonals-bg01.png);
+  background-size: cover;
+  background-position: center;
+  height: 420px;
+}
+
+header {/* flex-container */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width:100%;
+  z-index: 999;
+  padding-right:30px;
+}
+
+header h1 {/* flex-item */
+  margin-right: auto;/* 플렉스 아이템 개별 정렬 */
+  margin-left: 30px;
+  margin-top: 10px;
+  width:150px;
+}
+  
+header #list {/* flex-item / flex-container*/
+  display: flex;
+}
+  
+/* 각 각의 대메뉴 제목 */
+header #list > li > a {
+  font-weight: 700;
+  font-size: 13.5px;
+  padding: 0 20px;
+  height: 60px;
+  line-height: 60px;
+  text-decoration: none;
+  color: #1c1c1c;
+  }
+  
+header #registry {/* flex-item / flex-container */
+  display: flex;
+  margin:0 35px;
+  position: relative;
+}
+
+header #registry a {
+  margin:5px;
+  font-size: 13.5px;
+  text-decoration: none;
+  color: #1c1c1c;
+}
+
+header #registry img{
+  width:18px;
+}
+  
+/*****KOR js****/
+  
+header #gnb {
+  border:1px solid black;
+  width: 60px;
+  height: 90px;
+  transition: .4s;
+  overflow: hidden;
+  position: absolute;
+  top:30px;
+  text-indent: 10px;
+  font-size: 10px;
+}
+  
+header #gnb{
+  height: 0;
+}
+    
+/*******************/
+  
+header #menu img{
+  width:25px;
+}
+
+/*******************/
+nav{ 
+  width:90%; 
+  margin: 0 auto;
+  padding:0 10%;
+}
+    
+nav .search{
+  width: 100%;
+  margin: auto;
+  top:100px;
+}
+
+nav .search select{
+  height: 50px; width:95px; 
+  text-indent:10px; 
+  border:1.8px solid black;
+  border-right: none;
+  margin-right: none;
+}
+
+nav input{ 
+  width:100%;
+  height: 50px;
+}
+
+nav input[ type="text" ] {width: 70%;
+  background-image: url(./images/search.svg);
+  background-repeat: no-repeat;
+  background-position: 98%;
+  background-size: 25px;
+  text-indent: 10px;
+  border: 1px solid black;
+  border-left: none;
+  margin-left: none;
+}
+
+nav #tab_menu{
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  flex-direction:row;
+  gap:20px;
+  text-decoration: none;
+  margin-top: 90px;
+  margin-bottom: 40px;
+}
+
+nav #tab_menu a{
+  text-decoration: none;
+  color: #f4f3f0;
+}
+nav #tab_menu .subject{
+  color: #ffe141;
+}
+
+nav .search{
+  width: 100%;
+}
+
+nav select{
+    width:55px;
+}
+
+
+/* 전문가 변호사 소개 리스트 영역 */
+
+#professionals {
+  padding: 85px 0;
+}
+
+/* #professionals ul {
+  /* display: flex; */
+  /* justify-content: center; */
+  /* display: grid;
+  grid-template : repeat(2,1fr) / repeat(5, 1fr);
+  margin-top: 60px;
+  padding: 0 600px 20px;
+  margin-top: 60px; 
+} */
+
+#professionals ul {
+  /* display: flex; */
+  display: grid;
+  grid-template-columns: repeat(5,192px);
+  margin-top: 60px;
+  justify-content: center
+}
+
+#professionals ul li {
+  width: 192px;
+  padding: 10px 10px 80px 10px;
+}
+
+#professionals ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  /* display:block; */
+  /* height: 100%;
+  width: 100%;
+  overflow: hidden; */
+}
+
+#professionals ul li h3 {
+  font-size: 25px;
+  font-weight: 500;
+  text-align: left;
+  padding: 20px 0 0 5px;
+}
+
+#professionals ul li a img:hover {
+  transform:scale(1.1)
+}
+
+#professionals ul li .p_wrp {
+  margin-bottom: 20px;
+}
+
+#professionals ul li p {
+  font-size: 14px;
+  color: rgb(91, 91, 91);
+  text-align: left;
+  padding: 5px 0 0 5px;
+}
+
+#more_button {
+  text-align: center;
+}
+
+#professionals .more-box {
+  transform: translateX( -50px )
+}
+
+#professionals .more-box {
+  width: 50px;
+  height: 50px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 50%;
+  background-color: rgb(255, 230, 0);
+  transition: all 0.5s linear;
+} 
+
+#professionals .more-circle {
+   width: 100%;
+  height: 100%; */
+  /* border: 10px solid #ffffff; */
+  /* border-radius: 50%; */
+}
+#professionals .more-box:hover {
+  transform: translateX( 50px )
+}
+
+/* footer 영역 */
+
+footer{
+  background-color: #f5f5f5;
+}
+
+/* 위로올라가기 아이콘 */
+footer h1{
+  background-color: #1c1c1c;
+  border: 3px solid #1c1c1c;
+  width: 50px; height: 50px; line-height: 30px;
+  position: absolute;
+  right: 185px;
+  text-align: center;
+  padding-top: 5px;
+  margin-top: -20px;
+}
+footer h1 a{
+  text-decoration: none;
+  color:white;
+  background-color: #1c1c1c;
+  font-size: 20px;
+}
+
+.mainfooter {
+  min-width: 1100px;
+  height: 450px;
+
+  display: flex;
+  justify-content: center;
+}
+.subcontainer strong {
+  color: black;
+}
+.subcontainer {
+  height: 400px;
+  margin: 0 100px; padding: 50px 0 0;
+  width: 1100px;
+}
+.inner ul{
+display:flex;
+border-bottom:1px solid black;
+}
+.inner ul li{
+  margin:15px auto;
+  margin-bottom:30px;
+}
+.inner ul a{
+  color:#1c1c1c;
+  text-decoration: none;
+  font-size: 18px;
+  font-family:  'Lora', serif;
+  font-weight: 600;
+}
+
+.footerlogo {
+  display: block;
+  width: 175px; height: 50px;
+  background: url(./images/law.svg) no-repeat;
+  background-size: contain;
+  margin: 30px 0;
+}
+
+.footer_grid {
+  color:#1c1c1c;
+  width:100%; display: grid;
+ 
+  grid-template-columns:1fr 1fr;
+  grid-template-rows:  1fr 1fr 1fr 1f;
+  font-size:10.5px;
+}
+
+.footer_grid1{
+  grid-column: 1 / 2; 
+  grid-row: 1 / 2;
+}
+.footer_grid2{
+ grid-column:2/3;
+ grid-row:1/4;
+}
+.footer_grid2 a:hover{
+text-decoration: underline;
+}
+.footer_grid3{
+  grid-column:1/2;
+  grid-row:2/3;
+}
+.footer_grid4{
+  grid-column:1/2;
+  grid-row:3/4;
+  margin: 50px 5px 0;
+  display: flex;
+
+}
+.footer_grid4 li a{
+  background-image: url(./images/search.svg);
+  background-repeat: no-repeat;
+  background-size: 30px;
+}
+
+.footer_grid4 .in {
+  background: url(./images/in.svg) no-repeat;
+  /* background-size: 20px; */
+  /* background-position: 50%; */
+  display: inline-block;
+  width: 2.8rem;
+  height: 2.8rem;
+}
+
+.footer_grid4 .youtube {
+  background: url(./images/youtube.svg) no-repeat;
+  /* background-size: 25px;
+  background-position: 50%; */
+  display: inline-block;
+  width: 2.8rem;
+  height: 2.8rem;
+}
+
+.footer_grid5{
+  grid-column:1/2;
+  grid-row:4/5;
+}
+.footer_grid6{
+  grid-column:2/3;
+  grid-row:4/5;
+}
+
+.footer_grid2 .family{
+font-size: 13px;
+margin-top: 20px;
+margin-bottom: 15px;
+grid-row: 1 / 3;
+}
+.footer_grid2 li{
+ text-align: right;
+ padding:2px 0;
+}
+.footer_grid2 a{
+  color:#1c1c1c;
+  text-decoration: none;
+}
+
+.footer_grid6 li{
+  text-align: right;
+}
