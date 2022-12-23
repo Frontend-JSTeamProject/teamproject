@@ -94,7 +94,7 @@ const mainObserver1 = new IntersectionObserver(entries => {
 }, mainOptions1);
 
 // 소제목
-const mainTitle1 = document.querySelectorAll('#main_highlights h2, #main_centers h2, .main_insights_inner h3, .main_insights_bg, .main_insights_slide_list, .insights_arrow_box, .view_all_btn, .main_careers_inner>h1, .careers_slider');
+const mainTitle1 = document.querySelectorAll('#main_highlights h2, #main_centers h2, .main_insights_inner h3, .main_insights_bg, .main_insights_slide_list, .insights_arrow_box, .view_all_btn, .main_careers_inner h1, .careers_slider');
 console.log(mainTitle1);
 
 mainTitle1.forEach(el => mainObserver1.observe(el));
@@ -453,7 +453,7 @@ addEventListener('scroll', () => {
   if(scrollY < 1400) {
     career.style.right = `-70%`;
   }else if(scrollY >= 1400) {
-    career.style.right = `${(scrollY- 2200)}px`;
+    career.style.right = `${(scrollY - 5300)}px`;
   }
 });
 
