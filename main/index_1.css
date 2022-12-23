@@ -953,13 +953,13 @@ header .header_container_right #menu span {
   content: '';
   width: 24px;
   height: 24px;
-  background: url(./images/index_1/data_image_svg+xml\,….svg) no-repeat center / contain;
+  background: url(./images/index_1/ico-arrow-left.svg) no-repeat center / contain;
 }
 #main_centers .centers_slide_wrap .btn .slide_btn .next::before {
   content: '';
   width: 24px;
   height: 24px;
-  background: url(./images/index_1/data_image_svg+xml\,….svg) no-repeat center / contain;
+  background: url(./images/index_1/ico-arrow-left.svg) no-repeat center / contain;
   transform: rotate(180deg);
 }
 #main_centers .centers_slide_wrap .btn .slide_btn .page {
@@ -1349,8 +1349,9 @@ i {
 /* --- CAREERS ---*/
 .main_careers {
   position: relative;
-  padding: 16rem 0 25rem;
+  padding: 16rem 0 0;
   overflow: hidden;
+  margin-bottom: 25rem;
 }
 .careers_bg_txt {
   position: absolute;
@@ -1451,7 +1452,7 @@ i {
 .careers_bg {
   width: 100%;
   position: absolute;
-  left: 0; top: 9.6rem;
+  left: 0; top: 0;
   max-width: 152rem;
   height: 63.6rem;
   background: linear-gradient(180deg,#ffe141 0,rgba(245,245,245,0) 100%);
@@ -1771,6 +1772,10 @@ footer .inner ul a:hover {
 }
 .footer_grid6 li {
   position: relative;
+  cursor: pointer;
+}
+.footer_grid6 li:hover {
+  text-decoration: underline;
 }
 .footer_grid6 li~li::before {
   content: "";
