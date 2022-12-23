@@ -1,59 +1,58 @@
 @charset "UTF-8";
 
-/* NotoSans */
 @font-face {
-  font-family: 'NotoSansCJKkr';
-  font-weight: 900;
-  font-display: swap;
-  src: url('./fonts/NotoSansCJKkr-Black.otf') format('opentype');
+    font-family: NotoSansCJKkr;
+    font-weight: 900;
+    font-display: swap;
+    src: url(./fonts/NotoSansCJKkr-Black.otf) format("opentype")
 }
 
 @font-face {
-  font-family: 'NotoSansCJKkr';
-  font-weight: 700;
-  font-display: swap;
-  src: url('./fonts/NotoSansCJKkr-Bold.otf') format('opentype');
+    font-family: NotoSansCJKkr;
+    font-weight: 700;
+    font-display: swap;
+    src: url(./fonts/NotoSansCJKkr-Bold.otf) format("opentype")
 }
 
 @font-face {
-  font-family: 'NotoSansCJKkr';
-  font-weight: 500;
-  font-display: swap;
-  src: url('./fonts/NotoSansCJKkr-Medium.otf') format('opentype');
+    font-family: NotoSansCJKkr;
+    font-weight: 500;
+    font-display: swap;
+    src: url(./fonts/NotoSansCJKkr-Medium.otf) format("opentype")
 }
 
 @font-face {
-  font-family: 'NotoSansCJKkr';
-  font-weight: 400;
-  font-display: swap;
-  src: url('./fonts/NotoSansCJKkr-Regular.otf') format('opentype');
+    font-family: NotoSansCJKkr;
+    font-weight: 400;
+    font-display: swap;
+    src: url(./fonts/NotoSansCJKkr-Regular.otf) format("opentype")
 }
 
-/* Lora */
-@font-face {
-  font-family: 'Lora';
-  font-weight: 700;
-  font-display: swap;
-  src: local('Lora Bold'), url('./fonts/Lora-Bold.woff') format('woff');
-}
 
 @font-face {
-  font-family: 'Lora';
-  font-weight: 600;
-  font-display: swap;
-  src: local('Lora SemiBold'), url('./fonts/Lora-SemiBold.woff') format('woff');
+    font-family: Lora;
+    font-weight: 700;
+    font-display: swap;
+    src:url(./fonts/Lora-Bold.ttf) format("opentype")
 }
 
 @font-face {
-  font-family: 'Lora';
-  font-weight: 500;
-  font-display: swap;
-  src: local('Lora Medium'), url('./fonts/Lora-Medium.woff') format('woff');
+    font-family: Lora;
+    font-weight: 600;
+    font-display: swap;
+    src:url(./fonts/Lora-SemiBold.ttf) format("opentype")
 }
 
 @font-face {
-  font-family: 'Lora';
-  font-weight: 400;
-  font-display: swap;
-  src: local('Lora Regular'), url('./fonts/Lora-Regular.woff') format('woff');
+    font-family: Lora;
+    font-weight: 500;
+    font-display: swap;
+    src:url(./fonts/Lora-Medium.ttf) format("opentype")
+}
+
+@font-face {
+    font-family: Lora;
+    font-weight: 400;
+    font-display: swap;
+    src:url(./fonts/Lora-Regular.ttf) format("opentype")
 }
