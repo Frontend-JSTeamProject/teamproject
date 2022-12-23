@@ -632,7 +632,7 @@ nav #nav_list a {
 nav #nav_list li:last-of-type {
   position: relative;
 }
-nav #nav_list li:last-of-type:before {
+nav #nav_list li:last-of-type::before {
   content: '';
   position: absolute;
   left: 14px;
