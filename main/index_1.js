@@ -58,6 +58,21 @@ addEventListener("wheel", (e) => {
   }
 });
 
+// Main Sub-Menu Page
+const mainSubMenuPge = document.querySelector('.main_menu_page');
+const mainMenuOpenIcon = document.querySelector('#menu');
+const mainMenuCloseIcon = document.querySelector('.icon_close');
+// const mainSubMenu = document.querySelector('.gnb_menu_inner');
+
+
+mainMenuOpenIcon.addEventListener('click', e => {
+  mainSubMenuPge.classList.add('open');
+});
+mainMenuCloseIcon.addEventListener('click', e => {
+  mainSubMenuPge.classList.remove('open');
+});
+
+
 
 // progressBar
 const progressBar = document.querySelector('.progressBar');
