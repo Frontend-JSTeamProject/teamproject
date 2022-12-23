@@ -1213,7 +1213,7 @@ i {
 /* --- CAREERS ---*/
 .main_careers {
   position: relative;
-  padding: 16rem 0 0;
+  padding: 16rem 0 25rem;
   overflow: hidden;
 }
 .careers_bg_txt {
@@ -1489,3 +1489,177 @@ i {
 }
 
 /************** footer **************/
+footer {
+  background-color: #f5f5f5;
+  height: 590px;
+  padding: 80px 0;
+}
+.mainfooter {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+/* 위로올라가기 아이콘 */
+footer h1 {
+  background-color: #1c1c1c;
+  border: 3px solid #1c1c1c;
+  width: 6rem;
+  height: 6rem;
+  line-height: 40px;
+  position: absolute;
+  right: 15rem;
+  top: -9rem;
+  text-align: center;
+  padding-top: 5px;
+  margin-top: -20px;
+}
+footer h1 a {
+  text-decoration: none;
+  color: white;
+  background-color: #1c1c1c;
+  font-size: 30px;
+}
+
+.subcontainer strong {
+  color: black;
+}
+.subcontainer {
+  height: 400px;
+  margin: 0 100px;
+  width: 1600px;
+}
+footer .inner ul {
+  display: flex;
+  gap: 194px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #1c1c1c;
+}
+footer .inner ul li {
+}
+footer .inner ul a {
+  display: block;
+  color: #1c1c1c;
+  text-decoration: none;
+  font-size: 32px;
+  font-family: 'Lora', serif;
+  font-weight: 600;
+}
+footer .inner ul a:hover {
+  text-decoration: underline;
+}
+.footerlogo {
+  display: block;
+  width: 170px;
+  height: 34px;
+  background: url(./images/law.svg) no-repeat 50%;
+  background-size: contain;
+  margin-bottom: 48px;
+}
+.footer_grid {
+  color: #1c1c1c;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1f;
+  font-size: 12.32px;
+}
+.footer_grid1 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+.footer_grid2 {
+  grid-column: 2/3;
+  grid-row: 1/4;
+}
+.footer_grid2 a:hover {
+  text-decoration: underline;
+}
+.footer_grid3 {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.footer_grid3 li {
+  margin-bottom: 3px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.footer_grid4 {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  margin: 20px 0 20px;
+  display: flex;
+}
+.footer_grid4 li a {
+  background-image: url(./images/search.svg);
+  background-repeat: no-repeat;
+  background-size: 30px;
+}
+.footer_grid4 .in {
+  background: url(./images/in.svg) no-repeat;
+  /* background-size: 20px; */
+  /* background-position: 50%; */
+  display: inline-block;
+  width: 2.8rem;
+  height: 2.8rem;
+  margin-right: 2rem;
+}
+.footer_grid4 .youtube {
+  background: url(./images/youtube.svg) no-repeat;
+  /* background-size: 25px;
+  background-position: 50%; */
+  display: inline-block;
+  width: 2.8rem;
+  height: 2.8rem;
+}
+.footer_grid5 {
+  grid-column: 1/2;
+  grid-row: 4/5;
+  font-family: Lora;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #1c1c1c;
+  letter-spacing: 0;
+}
+.footer_grid6 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 1rem 2.8rem;
+  font-size: 14px;
+  line-height: 2;
+}
+.footer_grid6 li {
+  position: relative;
+}
+.footer_grid6 li~li::before {
+  content: "";
+  position: absolute;
+  left: -1.4rem;
+  top: 50%;
+  width: 1px;
+  height: 1.2rem;
+  background-color: #ddd;
+}
+.footer_grid2 .family {
+  font-size: 16px;
+  margin-bottom: 12px;
+  grid-row: 1 / 3;
+  font-family: 'Lora';
+  line-height: 1.6;
+}
+.footer_grid2 li {
+  text-align: right;
+  padding: 2px 0;
+}
+.footer_grid2 a {
+  font-size: 14px;
+  line-height: 2;
+}
+.footer_grid6 li {
+  text-align: right;
+}
