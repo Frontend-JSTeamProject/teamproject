@@ -18,6 +18,9 @@ body {
     Verdana, Geneva, sans-serif, Apple Gothic, AppleGothic;
   color: #1c1c1c;
 }
+body.no_scroll{
+  overflow: hidden;
+}
 img {
   vertical-align: middle;
 }
@@ -312,9 +315,6 @@ header .header_container_right #menu span {
   transition-duration: .3s;
   transition-timing-function: ease-in-out;
   z-index: 200;
-}
-.main_menu_page::-webkit-scrollbar{
-  display: none;
 }
 .main_menu_page.open {
   top: 0;

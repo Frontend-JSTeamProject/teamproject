@@ -62,14 +62,17 @@ addEventListener("wheel", (e) => {
 const mainSubMenuPge = document.querySelector('.main_menu_page');
 const mainMenuOpenIcon = document.querySelector('#menu');
 const mainMenuCloseIcon = document.querySelector('.icon_close');
+const body = document.querySelector('body');
 // const mainSubMenu = document.querySelector('.gnb_menu_inner');
 
 
 mainMenuOpenIcon.addEventListener('click', e => {
   mainSubMenuPge.classList.add('open');
+  body.classList.add('no_scroll');
 });
 mainMenuCloseIcon.addEventListener('click', e => {
   mainSubMenuPge.classList.remove('open');
+  body.classList.remove('no_scroll');
 });
 
 
