@@ -1,0 +1,216 @@
+@charset 'utf-8';
+body{
+  font-family: 'NotoSansCJKkr',"Malgun Gothic","맑은 고딕","돋움",Dotum,"굴림",Gulim,Tahoma,Verdana,Geneva,sans-serif,Apple Gothic,AppleGothic;
+   color: #1c1c1c;
+  /* font-size: 1.6rem; */
+  font-weight: 400;
+  letter-spacing: 0;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrapper{
+  background-image: url(./images/professonals-bg01.png);
+  background-size: cover;
+  background-position: center; ;
+  height: 400px;
+}
+
+
+/* 상단 헤더 */
+.wrapper header {/* flex-container */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width:100%;
+  z-index: 999;
+  padding-right:30px;
+}
+
+.wrapper header h1 {/* flex-item */
+  margin-right: auto;/* 플렉스 아이템 개별 정렬 */
+  margin-left: 30px;
+  margin-top: 10px;
+  width:150px;
+}
+  
+.wrapper header #list {/* flex-item / flex-container*/
+  display: flex;
+}
+  
+/* 각 각의 대메뉴 제목 */
+.wrapper header #list > li > a {
+  font-weight: 700;
+  font-size: 13.5px;
+  padding: 0 20px;
+  height: 60px;
+  line-height: 60px;
+  text-decoration: none;
+  color: #1c1c1c;
+  }
+  
+.wrapper header #registry {/* flex-item / flex-container */
+  display: flex;
+  margin:0 35px;
+  position: relative;
+}
+
+.wrapper header #registry a {
+  margin:5px;
+  font-size: 13.5px;
+  text-decoration: none;
+  color: #1c1c1c;
+}
+
+header #registry img{
+  width:18px;
+}
+  
+/*****KOR js****/
+  
+.wrapper header #gnb {
+  border:1px solid black;
+  width: 60px;
+  height: 90px;
+  transition: .4s;
+  overflow: hidden;
+  position: absolute;
+  top:30px;
+  text-indent: 10px;
+  font-size: 10px;
+}
+  
+.wrapper header #gnb{
+  height: 0;
+} 
+header #menu img{
+  width:25px;
+}
+
+/*******nav시작************/
+.wrapper nav{ 
+   width: 60%;
+   margin: 0 auto;
+}
+.wrapper nav #tab_menu{
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  flex-direction:row;
+  gap:20px;
+  text-decoration: none;
+  margin-top: 90px;
+  margin-bottom: 40px;
+  border: none;
+}
+.wrapper nav #tab_menu a{
+  text-decoration: none;
+  color: #f4f3f0;
+}
+.wrapper nav #tab_menu .subject{
+  color: #ffe141;
+}
+.wrapper nav fieldset{
+  width:100% ; height: 72px;
+  background-image: url(./images/search.svg);
+  background-repeat: no-repeat;
+  background-position: 98%;
+  background-size: 25px;
+  background-color: white;
+}
+.wrapper nav fieldset #look{
+  
+}
+.wrapper nav select{
+  width: 15%;
+  height: 100%;
+  text-indent: 10%;
+  border: none;
+  font-size: 15px;
+}
+.wrapper nav input[ type="text" ] {
+  width: 70%; height: 100%;
+ font-size: 15px;
+  text-indent: 10px;
+  border: none
+}
+.wrapper nav .search{
+  
+}
+
+
+
+
+/* 전문가 변호사 소개 리스트 영역 */
+main{
+ 
+}
+main .main_introduce{
+  width: 60%;
+  margin: 90px auto;
+}
+main .main_introduce>ul{
+  width:194px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+main .main_introduce>ul>li{
+  height: 380px;
+  margin: 15px;
+}
+main .main_introduce>ul>li figure{
+  width:194px; height: 194px;
+  overflow: hidden;
+}
+main .main_introduce>ul>li img{
+  width: 100%;
+}
+main .main_introduce>ul>li img:hover{
+  transition: .5s;
+  transform:scale(1.1)
+}
+main .main_introduce>ul>li h1{
+  margin-top:20px ;
+}
+main .main_introduce>ul>li h1 a{
+text-decoration: none;
+font-weight: 700;
+font-size: 24px;
+line-height: 1.4;
+color: #1c1c1c;
+letter-spacing: 0;
+}
+main .main_introduce>ul>li:hover{
+  text-decoration: underline;
+}
+main .main_introduce>ul>li .lawyer{
+  text-decoration: none;
+  margin: 10px 0 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+}
+main .main_introduce>ul>li span{
+  font-family: 'Lora';
+  font-weight: 400;
+
+  color: #555;
+}
+main .main_introduce>ul>li a{
+  font-size: 24px;
+  text-decoration: none;
+}
+main .main_introduce>ul>li p a{
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #555;
+}
+.main_box{
+  width: 60px;
+  margin: 0 auto;
+}
+
