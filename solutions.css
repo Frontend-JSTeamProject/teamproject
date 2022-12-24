@@ -455,10 +455,10 @@ header .header_container_right #menu span {
   transition: all 0.4s;
 }
 .facebook_icon {
-  background-image: url(./images/index_1/data_image_svg+xml\,….svg);
+  background-image: url(./images/f.svg);
 }
 .twitter_icon {
-  background-image: url(./images/index_1/data_image_svg+xml.twitter.svg);
+  background-image: url(./images/t.svg);
 }
 
 /*---- Main Sub-Menu Page ----*/
