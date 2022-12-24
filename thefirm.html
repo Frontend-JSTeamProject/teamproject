@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>법무법인 화우</title>
+    <!-- reset -->
+    <link rel="stylesheet" href="./common/minireset.min.css" />
+    <!-- font -->
+    <link rel="stylesheet" href="./common/fonts.css" />
+    <!-- style css -->
+    <link rel="stylesheet" href="./thefirm.css" />
+    <!-- script -->
+    <script defer src="./thefirm.js"></script>
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- open graph -->
+    <meta property ="og:title" content="법무법인 화우">
+    <meta property ="og:url" content="https://frontend-jsteamproject.github.io/teamproject/thefirm.html">
+    <meta property ="og:image" content="./images/openGraph/openGraph.png">
+    <meta property ="og:description" content="최적의 솔루션을 제공합니다.">
+    <meta property ="og:type" content="website">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./images/favicon_io/android-chrome-192x192.png" type="image/x-icon">
+  </head>
+
+  <body>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- 상단 헤더 메뉴 -->
+    <header>
+      <ul id="header_nav_list">
+        <li class="home">
+          <a href="#">Home</a>
+        </li>
+        <li class="the_firm">
+          <a href="#">The&nbsp;Firm</a>
+        </li>
+        <li class="firm_pop">
+          <div class="firm_pop_title">화우소개</div>
+            <ul id="header_firm_nav_list">
+              <li><a href="./thefirm.html" class="strong">화우소개</a></li>
+              <li><a href="#">연혁</a></li>
+              <li><a href="#">수상</a></li>
+              <li><a href="#">해외사무소</a></li>
+              <li><a href="#">사무소 위치</a></li>
+            </ul>
+          
+        </li>
+      </ul>
+      <div class="gnb_wrapper">
+        <h1><a href="./index.html"></a></h1>
+
+        <div class="header_container_right">
+          <!-- 대메뉴 -->
+          <ul id="list">
+            <li><a href="./solutions.html">SOLUTIONS</a></li>
+            <li><a href="./professionals.html">PROFESSIONALS</a></li>
+            <li><a href="./insights.html">INSIGHTS</a></li>
+            <li><a href="./thefirm.html">THE FIRM</a></li>
+          </ul>
+
+          <!-- 상단 헤더 언어선택 메뉴 -->
+
+          <div class="lang">
+            <div class="korean">KOR</div>
+            <ul id="gnb">
+              <li><a href="#">KOR</a></li>
+              <li><a href="#">ENG</a></li>
+              <li><a href="#">CHN</a></li>
+              <li><a href="#">JPN</a></li>
+            </ul>
+          </div>
+          <!-- 상단 헤더 아이콘  -->
+          <a href="#" class="header_map"></a>
+          <a href="#" class="header_search"></a>
+
+          <!--상단 헤더 햄버거 메뉴 아이콘-->
+          <a href="#" id="menu">
+            <span></span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Side Bar-->
+    <div class="side_bar">
+      <button type="button" class="side_bar_search">
+        <span>professionals</span>
+      </button>
+      <div class="side_Bar_util">
+        <button>
+          <span class="side_bar_icon">
+            <img src="./images/share.svg" alt="sns_icon" />
+          </span>
+          <ul class="side_bar_hov_icon">
+            <li><a href="#" class="facebook_icon"></a></li>
+            <li><a href="#" class="twitter_icon"></a></li>
+          </ul>
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Sub-Menu Page-->
+    <div class="main_page">
+      <div class="main_menu_page">
+        <button class="icon_close">
+          <span>닫기</span>
+        </button>
+        <div class="gnb_menu_inner">
+          <h2 class="menu_logo">
+            <a href="#">법무법인</a>
+          </h2>
+          <ul class="gnb_main_menu">
+            <li>
+              <h2>solution</h2>
+              <ul id="gnb_main_submenu">
+                <li><a href="#">분야별</a></li>
+                <li><a href="#">산업별</a></li>
+                <li><a href="#">국가별</a></li>
+                <li><a href="#">센터</a></li>
+              </ul>
+            </li>
+            <li>
+              <h2>professionals</h2>
+              <ul id="gnb_main_submenu">
+                <li><a href="#">구성원 검색</a></li>
+              </ul>
+            </li>
+            <li>
+              <h2>insights</h2>
+              <ul id="gnb_main_submenu">
+                <li><a href="#">뉴스</a></li>
+                <li><a href="#">뉴스레터</a></li>
+                <li><a href="#">기고 및 연구자료</a></li>
+              </ul>
+            </li>
+            <li>
+              <h2>the firm</h2>
+              <ul id="gnb_main_submenu">
+                <li><a href="#">화우 소개</a></li>
+                <li><a href="#">연혁</a></li>
+                <li><a href="#">수상</a></li>
+                <li><a href="#">해외사무소</a></li>
+                <li><a href="#">사무소 위치</a></li>
+              </ul>
+            </li>
+            <li>
+              <h2>careers</h2>
+              <ul id="gnb_main_submenu">
+                <li><a href="#">영입안내</a></li>
+                <li><a href="#">영입공고</a></li>
+                <li><a href="#">지원하기</a></li>
+                <li><a href="#">직원채용</a></li>
+              </ul>
+            </li>
+            <li>
+              <h2>pro bono</h2>
+              <ul id="gnb_main_submenu">
+                <li><a href="#">법무법인 공익활동</a></li>
+                <li><a href="#">화우공익재단</a></li>
+              </ul>
+            </li>
+            <li>
+              <h2>family sites</h2>
+              <ul id="gnb_main_submenu">
+                <li><a href="#">특허법인 화우</a></li>
+                <li><a href="#">관세법인 화우</a></li>
+                <li><a href="#">세무법인 화우</a></li>
+                <li><a href="#">화우공익재단</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-------------------------------->
+    <div class="firm_container">
+      <div class="firm_wrapper">
+        <nav>
+          <div class="nav_wrapper">
+            <ul id="nav_list">
+              <li class="home">
+                <a href="#">Home</a>
+              </li>
+              <li class="the_firm">
+                <a href="#">The Firm</a>
+              </li>
+              <li class="firm_pop">
+                <div class="firm_pop_title">화우소개</div>
+                  <ul id="firm_nav_list">
+                    <li><a href="./thefirm.html" class="strong">화우소개</a></li>
+                    <li><a href="#">연혁</a></li>
+                    <li><a href="#">수상</a></li>
+                    <li><a href="#">해외사무소</a></li>
+                    <li><a href="#">사무소 위치</a></li>
+                  </ul>
+              </li>
+            </ul>
+            <h1>화우소개</h1>
+            <div class="list_container">
+              <ul id="tab_menu">
+                <li id="tab1"><a href="#" class="subject">화우소개</a></li>
+                <li id="tab2"><a href="#">연혁</a></li>
+                <li id="tab3"><a href="#">수상</a></li>
+                <li id="tab4"><a href="#">해외사무소</a></li>
+                <li id="tab5"><a href="#">사무소 위치</a></li>
+              </ul>
+              <button type="button" class="icon-print"><span>프린트</span></button>
+            </div>
+          </div>
+        
+          
+        </nav>
+
+        <!--  인트로 컨텐츠 영역 -->
+
+        <!-- data-aos는 사용할 애니메이션 효과명 
+    data-aos-duration는 재생시간  
+    data-aos-delay 대기시간  
+  -->
+        <main>
+          <article class="box-visual">
+            <h3 class="typo-heading-01">
+              <em data-aos="fade-right" data-aos-duration="1000">Legal Services</em>
+              <em data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400"
+                ><span>of the</span> Highest Caliber</em
+              >
+            </h3>
+            <div class="bg"></div>
+          </article>
+
+          <article class="box-intro-txt">
+            <span class="circle-ani"></span>
+            <strong class="before-txt" data-aos="fade-right" data-aos-duration="1000">
+              Performance.<br />
+              Managing risk<br />
+              Results
+            </strong>
+            <ul class="box-contents-wrap">
+              <li>
+                <div class="thumb" data-aos="fade-down" data-aos-duration="1000">
+                  <img src="./images/intro01.png" alt="" />
+                </div>
+                <dl data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
+                  <dt class="typo-heading-02">Breakthrough <br />Innovation</dt>
+                  <dd>
+                    급변하는 산업구조와 기업법무 환경을 예측하는 <br />
+                    전문가들의 통찰력과 유기적인 협업을 통해 <br />
+                    혁신적인 원스톱 종합법률서비스를 제공합니다.
+                  </dd>
+                </dl>
+              </li>
+              <li>
+                <div class="thumb" data-aos="fade-left" data-aos-duration="1000">
+                  <img src="./images/intro02.png" alt="" />
+                </div>
+                <dl data-aos="fade-left" data-aos-duration="1000" data-aos-delay="400">
+                  <dt class="typo-heading-02">Client Focus</dt>
+                  <dd>
+                    고객의 입장에서 생각합니다. <br />
+                    고객맞춤형 종합법률서비스를 제공하며 <br />
+                    고객의 신뢰와 함께 성장하고 있습니다.
+                  </dd>
+                </dl>
+              </li>
+              <li>
+                <div class="thumb" data-aos="fade-right" data-aos-duration="1000">
+                  <img src="./images/intro03.png" alt="" />
+                </div>
+                <dl data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
+                  <dt class="typo-heading-02">Optimal Solution</dt>
+                  <dd>
+                    새로운 정책변화와 기업의 성장전략에 발맞추어 <br />
+                    변화에 따른 법적 리스크 해결을 위한 <br />
+                    최적의 솔루션을 제공합니다.
+                  </dd>
+                </dl>
+              </li>
+            </ul>
+          </article>
+        </main>
+      </div>
+    </div>
+    <!-- footer 영역 -->
+    <footer>
+      <div class="top_btn">
+        <h1><a href="#">↑</a></h1>
+      </div>
+
+      <div class="mainfooter">
+       
+        <div class="subcontainer">
+          <div class="inner">
+            <ul>
+              <li><a href="#">#Seoul</a></li>
+              <li><a href="#">#Tashkent</a></li>
+              <li><a href="#">#Ho Chi Minh City</a></li>
+              <li><a href="#">#Hanoi</a></li>
+              <li><a href="#">#Jakarta</a></li>
+            </ul>
+          </div>
+
+          <!--inner-->
+          <div class="footer_grid">
+            <ul class="footer_grid1">
+              <li class="footerlogo"></li>
+            </ul>
+            <ul class="footer_grid2">
+              <li class="family">Family Sites</li>
+              <li><a href="#">특허법인화우</a></li>
+              <li><a href="#">관세법인화우</a></li>
+              <li><a href="#">세무법인화우</a></li>
+              <li><a href="#">화우공익재단</a></li>
+            </ul>
+
+            <ul class="footer_grid3">
+              <li>서울시 강남구 영동대로 517 아셈타워 6, 17, 18, 19, 22, 23, 34층</li>
+              <li><strong>Tel.</strong> 02 6003 7000</li>
+              <li><strong>Fax.</strong> 02 6003 7800</li>
+              <li><strong>E-mail.</strong> hwawoo@hawawoo.com</li>
+            </ul>
+
+            <ul class="footer_grid4 grid4_box">
+              <li><a href="#" class="in"></a></li>
+              <li><a href="#" class="youtube"></a></li>
+            </ul>
+
+            <ul class="footer_grid5">
+              <li>ⓒ COPYRIGHT 2022. YOON & YANG LLC. ALL RIGHTS RESERVED.</li>
+            </ul>
+
+            <ul class="footer_grid6">
+              <li>오시는길</li>
+              <li>유한책임</li>
+              <li>면책공고</li>
+              <li>개인정보 처리방침</li>
+              <li>국제정보보호인증</li>
+              <li>웹접근성</li>
+            </ul>
+
+            <!--footer_grid-->
+          </div>
+          <!--subcontainer-->
+        </div>
+        <!--mainfooter-->
+      </div>
+    </footer>
+  </body>
+</html>
