@@ -1,6 +1,9 @@
 @charset 'utf-8';
 
 /* 공통 */
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: 'NotoSansCJKkr', 'Malgun Gothic', '맑은 고딕', '돋움', Dotum, '굴림', Gulim, Tahoma,
     Verdana, Geneva, sans-serif, Apple Gothic, AppleGothic;
