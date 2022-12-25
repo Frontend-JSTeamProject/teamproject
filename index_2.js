@@ -56,8 +56,8 @@ const mainObserver1 = new IntersectionObserver(entries => {
 }, mainOptions1);
 
 // 소제목
-const mainTitle1 = document.querySelectorAll('#main_highlights h2, #main_centers h2, .main_insights_inner h3, .main_insights_bg, .main_insights_slide_list, .insights_arrow_box, .view_all_btn, .main_careers_inner>h1, .careers_slider');
-// console.log(mainTitle1);
+const mainTitle1 = document.querySelectorAll('#main_highlights h2, #main_centers h2, .main_insights_inner h3, .main_insights_bg, .main_insights_slide_list, .insights_arrow_box, .view_all_btn, .main_careers_inner>h1');
+console.log(mainTitle1);
 
 mainTitle1.forEach(el => mainObserver1.observe(el));
 
@@ -208,7 +208,7 @@ addEventListener('scroll', () => {
 
 
 // CARRERS SWIPER
-
+/*
 var swiper = new Swiper(".careers_swiper", {
   loop: true,
   effect: 'fade',
@@ -233,84 +233,110 @@ var swiper = new Swiper(".careers_swiper", {
   },
 
 });
+*/
+
+// career 스크롤 이벤트
+const mainOptions4 = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.05,
+};
+
+const mainObserver4 = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+    }
+  });
+}, mainOptions4);
+// main_center 스크롤 이벤트
+const scrollevent = document.querySelectorAll(
+  '.careers_bg, .career_swiper_wrapper'
+);
+scrollevent.forEach(el => mainObserver4.observe(el));
 
 
-/*
+// career 슬라이드
 const careersPrevBtn = document.querySelectorAll('.prev_btn');
 const careersNextBtn = document.querySelectorAll('.next_btn');
 const careersWrapper = document.querySelector('.career_swiper_wrapper');
-const careersSlider = document.querySelectorAll('.careers_swiper_slider');
+const careersSlider = document.querySelector('.careers_slider');
 const careersSlideLeft = document.querySelectorAll('.careers_info');
 const careersSlideRight = document.querySelectorAll('.img_banner');
+const careersActive = document.querySelectorAll('.careers_swiper_slider')
+console.log(careersPrevBtn);
 
+// 이전 버튼
 careersPrevBtn[0].addEventListener('click', () => {
-  careersSlider[0].style.opacity = 0;
-  careersSlider[0].style.transition = '1s';
-  careersSlider[0].style.zIndex = '997';
-
-  careersSlider[2].style.opacity = 1;
-  careersSlideLeft[2].style.transition = '1s';
-  careersSlideRight[2].style.opacity = 1;
-  careersSlideRight[2].style.transition = '1s';
-  careersSlideRight[2].style.transitionDelay = '1s';
-  careersSlideLeft[2].style.transform = 'translate3d(0,0,0)';
-  careersSlideRight[2].style.transform = 'translate3d(0,0,0)';
-});
-careersNextBtn[0].addEventListener('click', () => {
-  careersSlider[0].style.opacity = 0;
-  careersSlider[0].style.transition = '1s';
-  careersSlider[0].style.zIndex = '997';
-  // careersSlideLeft[0].style.transform = 'translate3d(-10%,0,0)';
-
-  careersSlider[1].style.opacity = 1;
-  careersSlideLeft[1].style.transition = '1s';
-  careersSlideRight[1].style.opacity = 1;
-  careersSlideRight[1].style.transition = '1s';
-  careersSlideRight[1].style.transitionDelay = '1s';
-  careersSlideLeft[1].style.transform = 'translate3d(0,0,0)';
-  careersSlideRight[1].style.transform = 'translate3d(0,0,0)';
+  careersActive[0].classList.remove('show');
+  careersActive[2].classList.add('show');
 });
 
 careersPrevBtn[1].addEventListener('click', () => {
-  careersSlider[1].style.opacity = 0;
-  careersSlider[1].style.transition = '1s';
-  careersSlider[1].style.zIndex = '997';
-
-  careersSlider[0].style.opacity = 1;
-  careersSlideLeft[0].style.transition = '1s';
-  careersSlideRight[0].style.opacity = 1;
-  careersSlideRight[0].style.transition = '1s';
-  careersSlideRight[0].style.transitionDelay = '1s';
-  careersSlideLeft[0].style.transform = 'translate3d(0,0,0)';
-  careersSlideRight[0].style.transform = 'translate3d(0,0,0)';
-});
-careersNextBtn[1].addEventListener('click', () => {
-  careersSlider[1].style.opacity = 0;
-  careersSlider[1].style.transition = '1s';
-  careersSlider[1].style.zIndex = '997';
-  // careersSlideLeft[0].style.transform = 'translate3d(-10%,0,0)';
-
-  careersSlider[2].style.opacity = 1;
-  careersSlideLeft[2].style.transition = '1s';
-  careersSlideRight[2].style.opacity = 1;
-  careersSlideRight[2].style.transition = '1s';
-  careersSlideRight[2].style.transitionDelay = '1s';
-  careersSlideLeft[2].style.transform = 'translate3d(0,0,0)';
-  careersSlideRight[2].style.transform = 'translate3d(0,0,0)';
+  careersActive[1].classList.remove('show');
+  careersActive[0].classList.add('show');
 });
 
 careersPrevBtn[2].addEventListener('click', () => {
-  careersSlider[2].style.opacity = 0;
-  careersSlider[2].style.transition = '1s';
-  careersSlider[2].style.zIndex = '997';
-
-  careersSlider[1].style.opacity = 1;
-  careersSlideLeft[1].style.transition = '1s';
-  careersSlideRight[1].style.opacity = 1;
-  careersSlideRight[1].style.transition = '1s';
-  careersSlideRight[1].style.transitionDelay = '1s';
-  careersSlideLeft[1].style.transform = 'translate3d(0,0,0)';
-  careersSlideRight[1].style.transform = 'translate3d(0,0,0)';
+  careersActive[2].classList.remove('show');
+  careersActive[1].classList.add('show');
 });
-// console.log(careersPrevBtn);
-*/
+
+// 다음 버튼
+careersNextBtn[0].addEventListener('click', () => {
+  careersActive[0].classList.remove('show');
+  careersActive[1].classList.add('show');
+});
+
+careersNextBtn[1].addEventListener('click', () => {
+  careersActive[1].classList.remove('show');
+  careersActive[2].classList.add('show');
+});
+
+careersNextBtn[2].addEventListener('click', () => {
+  careersActive[2].classList.remove('show');
+  careersActive[0].classList.add('show');
+});
+
+// 나타나기
+careersPrevBtn[0].addEventListener('click', () => {
+  careersSlideLeft[2].classList.add('move');
+  careersSlideRight[2].classList.add('move');
+  careersSlideLeft[0].classList.remove('move');
+  careersSlideRight[0].classList.remove('move');
+});
+
+careersPrevBtn[1].addEventListener('click', () => {
+  careersSlideLeft[1].classList.remove('move');
+  careersSlideRight[1].classList.remove('move');
+  careersSlideLeft[0].classList.add('move');
+  careersSlideRight[0].classList.add('move');
+});
+
+careersPrevBtn[2].addEventListener('click', () => {
+  careersSlideLeft[2].classList.remove('move');
+  careersSlideRight[2].classList.remove('move');
+  careersSlideLeft[1].classList.add('move');
+  careersSlideRight[1].classList.add('move');
+});
+
+careersNextBtn[0].addEventListener('click', () => {
+  careersSlideLeft[0].classList.remove('move');
+  careersSlideRight[0].classList.remove('move');
+  careersSlideLeft[1].classList.add('move');
+  careersSlideRight[1].classList.add('move');
+});
+
+careersNextBtn[1].addEventListener('click', () => {
+  careersSlideLeft[1].classList.remove('move');
+  careersSlideRight[1].classList.remove('move');
+  careersSlideLeft[2].classList.add('move');
+  careersSlideRight[2].classList.add('move');
+});
+
+careersNextBtn[2].addEventListener('click', () => {
+  careersSlideLeft[2].classList.remove('move');
+  careersSlideRight[2].classList.remove('move');
+  careersSlideLeft[0].classList.add('move');
+  careersSlideRight[0].classList.add('move');
+});

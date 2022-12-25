@@ -526,17 +526,18 @@ i {
 }
 .careers_slider {
   position: relative;
+  /*
   transform: translateY(70px);
   opacity: 0;
-
   transition: 2s;
+  */
 }
-
+/*
 .careers_slider.active {
   opacity: 1;
   transform: translateY(0);
 }
-
+*/
 .careers_bg {
   width: 100%;
   position: absolute;
@@ -545,17 +546,15 @@ i {
   height: 63.6rem;
   background: linear-gradient(180deg,#ffe141 0,rgba(245,245,245,0) 100%);
   display: inline-block;
-  /* opacity: 0; */
+
+  opacity: 0;
   transition: 2s;
   transform: translateY(70px);
 }
-/*
 .careers_bg.active {
   opacity: 1;
   transform: translateY(0);
 }
-*/
-
 .careers_slider_track {
   position: relative;
   display: block;
@@ -568,6 +567,15 @@ i {
   display: table;
   content: "";
 }
+.career_swiper_wrapper {
+  opacity: 0;
+  transition: 2s;
+  transform: translateY(70px);
+}
+.career_swiper_wrapper.active {
+  opacity: 1;
+  transform: translateY(0);
+}
 .careers_swiper_slider {
   width: 1600px;
   position: relative;
@@ -578,28 +586,26 @@ i {
   height: 100%;
   min-height: 1px;
   text-transform: capitalize;
-  /* opacity: 0; */
+  opacity: 0;
   transform: translateY(70px);
-  transition: 2s;
-}/*
+  transition: 1s;
+  z-index: 998;
+}
 .careers_swiper_slider:nth-child(2) {
   opacity: 0;
   left: -1600px;
-  z-index: 998;
-  transform: translateY(0);
+  z-index: 997;
 }
 .careers_swiper_slider:nth-child(3) {
   opacity: 0;
   left: -3200px;
-  z-index: 997;
-  transform: translateY(0);
-}*/
-/*
-.careers_swiper_slider.active {
+  z-index: 996;
+}
+.careers_swiper_slider.show {
   opacity: 1;
   transform: translateY(0);
+  z-index: 999;
 }
-*/
 .careers_info_box {
   position: relative;
 }
@@ -608,20 +614,18 @@ i {
   align-items: center;
   justify-content: center;
   position: absolute;
-  left: 17%; top: -14rem;
+  right: 0; top: -14rem;
   width: 78.2rem; height: 63rem;
-  /* opacity: 0; */
-
-  transition: .4s;
-}
-/*
-.careers_swiper_slider:nth-child(1) .img_banner {
-  opacity: 1;
-}
-.careers_swiper_slider:nth-child(2) .img_banner, .careers_swiper_slider:nth-child(3) .img_banner {
+  opacity: 0;
+  transition: 1.2s;
+  transition-delay: 1s;
   transform: translate3d(10%,0,0);
 }
-*/
+.img_banner.move {
+  opacity: 1;
+  transform: translate3d(0,0,0);
+  transition-delay: 1.5s;
+}
 .img_banner>img {
   width: 100%;
   object-fit: cover;
@@ -634,10 +638,16 @@ i {
   gap: 8rem;
   padding: 15rem 13.6rem;
   transition: .5s;
-}/*
-.careers_swiper_slider:nth-child(2) .careers_info, .careers_swiper_slider:nth-child(3) .careers_info {
+  opacity: 0;
+  transition: 1s;
+  transition-delay: 1s;
   transform: translate3d(-10%,0,0);
-}*/
+}
+.careers_info.move {
+  opacity: 1;
+  transform: translate3d(0,0,0);
+  transition-delay: 1s;
+}
 .careers_info>strong {
   font-weight: 600;
   font-size: 5.6rem;
@@ -687,7 +697,7 @@ i {
   border: 1px solid #1c1c1c;
   font-size: 0;
   cursor: pointer;
-  top: 75%; left: 5.3%;
+  top: 75%; left: 8.3%;
 }
 .arrow_util_box .swiper-button-next::before {
   content: "";
@@ -712,5 +722,3 @@ i {
   color: #1c1c1c;
   font-family: Lora;
 }
-
-/* careers button event */
