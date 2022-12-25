@@ -2,97 +2,230 @@
 <html lang="ko">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>법무법인 화우</title>
-  <link rel="stylesheet" href="./common/minireset.min.css">
-  <link rel="stylesheet" href="./professionals.css">
+  <!-- reset -->
+  <link rel="stylesheet" href="./common/minireset.min.css" />
+  <!-- font -->
+  <link rel="stylesheet" href="./common/fonts.css" />
+  <!-- style css -->
+  <link rel="stylesheet" href="./professionals.css" />
+  <!-- script -->
   <script defer src="./professionals.js"></script>
-  <link rel="stylesheet" href="./common/fonts.css">
-  
+  <!-- aos -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- open graph -->
+  <meta property ="og:title" content="법무법인 화우">
+  <meta property ="og:url" content="https://frontend-jsteamproject.github.io/teamproject/thefirm.html">
+  <meta property ="og:image" content="./images/openGraph/openGraph.png">
+  <meta property ="og:description" content="최적의 솔루션을 제공합니다.">
+  <meta property ="og:type" content="website">
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./images/favicon_io/android-chrome-192x192.png" type="image/x-icon">
 </head>
 
 <body>
-
-  <div class="wrapper">
-  <!-- 상단 헤더 메뉴 -->
+<div class="header_cover">
   <header>
-    <h1><a href="#"><img src="./images/ci.svg" alt="법무법인 로고"></a></h1>
-   
-    <ul id="list">
-      <li><a href="./solutions.html">SOLUTIONS</a></li>
-      <li><a href="#">PROFESSIONALS</a></li>
-      <li><a href="#">INSIGHTS</a></li>
-      <li><a href="#">THE FIRM</a></li>
+    <ul id="header_nav_list">
+      <li class="home">
+        <a href="./index.html">Home</a>
+      </li>
+      <li class="solution_pop">
+        <div class="solution">Solutions</div>
+        <ul id="header_solutions_nav_list">
+          <li><a href="./solutions.html" class="strong">Solutions</a></li>
+          <li><a href="./professionals.html">Professionals</a></li>
+          <li><a href="./insights.html">Insights</a></li>
+          <li><a href="./thefirm.html">The Firm</a></li>
+        </ul>
+      </li>
     </ul>
+    <div class="gnb_wrapper">
+      <h1><a href="./index.html"></a></h1>
 
-<!-- 상단 헤더 언어선택 메뉴 -->
-    <ul id="registry">
-        <li><a href="#" id="btn">KOR <img src="./images/ico-arrow-down.svg" alt=""></a></li>
-             <ul id="gnb">
-              <li><a href="#">KOR</a></li>
-              <li><a href="#">ENG</a></li>
-              <li><a href="#">CHN</a></li>
-              <li><a href="#">JPN</a></li>
-             </ul>
+      <div class="header_container_right">
+        <!-- 대메뉴 -->
+        <ul id="list">
+          <li><a href="./solutions.html">SOLUTIONS</a></li>
+          <li><a href="./professionals.html">PROFESSIONALS</a></li>
+          <li><a href="./insights.html">INSIGHTS</a></li>
+          <li><a href="./thefirm.html">THE FIRM</a></li>
+        </ul>
 
-  <!-- 상단 헤더 아이콘  -->
-      <li><a href="#"><img src="./images/data_image_svg+xm.svg" alt="지도아이콘"></a></li>
-      <li><a href="#"><img src="./images/search.svg" alt="돋보기아이콘"></a></li>
-    </ul>
+        <!-- 상단 헤더 언어선택 메뉴 -->
 
-<!--상단 헤더 햄버거 메뉴 아이콘-->
-    <a href="#" id="menu">
-     <img src="./images/menuu.png" alt="">
-    </a>
+        <div class="lang">
+          <div class="korean">KOR</div>
+          <ul id="gnb">
+            <li><a href="#">KOR</a></li>
+            <li><a href="#">ENG</a></li>
+            <li><a href="#">CHN</a></li>
+            <li><a href="#">JPN</a></li>
+          </ul>
+        </div>
+        <!-- 상단 헤더 아이콘  -->
+        <a href="#" class="header_map"></a>
+        <a href="#" class="header_search"></a>
 
+        <!--상단 헤더 햄버거 메뉴 아이콘-->
+        <a href="#" id="menu">
+          <span></span>
+        </a>
+      </div>
+    </div>
   </header>
-<!--상단 검색창 영역-->
 
+  <!-- Side Bar-->
+  <div class="side_bar">
+    <button type="button" class="side_bar_search">
+      <span><a href="./professionals.html">professionals</a></span>
+    </button>
+    <div class="side_Bar_util">
+      <button>
+        <span class="side_bar_icon">
+          <img src="./images/index_1/data_image_svg+xml,… (2).svg" alt="sns_icon" />
+        </span>
+        <ul class="side_bar_hov_icon">
+          <li><a href="#" class="facebook_icon"></a></li>
+          <li><a href="#" class="twitter_icon"></a></li>
+        </ul>
+      </button>
+    </div>
+  </div>
 
-      <nav>
+  <!-- Main Sub-Menu Page-->
+  <div class="main_page">
+    <div class="main_menu_page">
+      <button class="icon_close">
+        <span>닫기</span>
+      </button>
+      <div class="gnb_menu_inner">
+        <h2 class="menu_logo">
+          <a href="#">법무법인</a>
+        </h2>
+        <ul class="gnb_main_menu">
+          <li>
+            <h2>solution</h2>
+            <ul id="gnb_main_submenu">
+              <li><a href="#">분야별</a></li>
+              <li><a href="#">산업별</a></li>
+              <li><a href="#">국가별</a></li>
+              <li><a href="#">센터</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>professionals</h2>
+            <ul id="gnb_main_submenu">
+              <li><a href="#">구성원 검색</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>insights</h2>
+            <ul id="gnb_main_submenu">
+              <li><a href="#">뉴스</a></li>
+              <li><a href="#">뉴스레터</a></li>
+              <li><a href="#">기고 및 연구자료</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>the firm</h2>
+            <ul id="gnb_main_submenu">
+              <li><a href="#">화우 소개</a></li>
+              <li><a href="#">연혁</a></li>
+              <li><a href="#">수상</a></li>
+              <li><a href="#">해외사무소</a></li>
+              <li><a href="#">사무소 위치</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>careers</h2>
+            <ul id="gnb_main_submenu">
+              <li><a href="#">영입안내</a></li>
+              <li><a href="#">영입공고</a></li>
+              <li><a href="#">지원하기</a></li>
+              <li><a href="#">직원채용</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>pro bono</h2>
+            <ul id="gnb_main_submenu">
+              <li><a href="#">법무법인 공익활동</a></li>
+              <li><a href="#">화우공익재단</a></li>
+            </ul>
+          </li>
+          <li>
+            <h2>family sites</h2>
+            <ul id="gnb_main_submenu">
+              <li><a href="#">특허법인 화우</a></li>
+              <li><a href="#">관세법인 화우</a></li>
+              <li><a href="#">세무법인 화우</a></li>
+              <li><a href="#">화우공익재단</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- solution_main -->
+  <div class="solutions_container">
+    <div class="solutions_wrapper">
+      
+      <!---------------------------------------------------------------------->
+      <article>
+      <div class="tab_wrapper">
         <ul id="tab_menu">
           <li id="tab1"><a href="#" class="subject">전체</a></li>
-          <li><a href="#">분야별</a></li>
-          <li><a href="#">산업별</a></li> 
-          <li><a href="#">국가별</a></li> 
-          <li><a href="#">센터</a></li> 
-        </ul> 
-    
-      <fieldset>
-      <select name="menu"> <!-- div#service_box, 1100 x 81.67, color: #555555, line-height: 18px -->
-      <option value="선택1" selected>전체</option>
-      <option value="선택2">공정거래</option>
-      <option value="선택3">관세·국제통상</option>
-      <option value="선택3">금융·자본시장</option>
-      <option value="선택4">기업자문</option>
-      <option value="선택5">소송·중재</option>
-      <option value="선택6">인사·노동</option>
-      <option value="선택7">조세</option>
-      <option value="선택8">지식재산권</option>
-      <option value="선택9">형사</option>
-      <option value="선택10">건설</option>
-      <option value="선택11">게임</option>
-      <option value="선택12">금융·자본시장</option>
-      <option value="선택13">모빌리티</option>
-      <option value="선택14">방위산업</option>
-      <option value="선택15">부동산</option>
-      
-      </select>
-      
-      <a href="#"><input type="text" placeholder="검색어를 입력해주세요"></a>
-    </fieldset>
-  
-   
- 
-  </nav>
+          <li id="tab2"><a href="#">분야별</a></li>
+          <li id="tab3"><a href="#">산업별</a></li>
+          <li id="tab4"><a href="#">국가별</a></li>
+          <li id="tab5"><a href="#">센터</a></li>
+        </ul>
+      </div><!--tab_wrapper-->
 
-</div> <!--header부터 nav까지 배경이 들어가기 위한 .wrapper-->
-  
 
+  
+        <div class="wrapper">
+          <fieldset class="search">
+            
+            <form>
+              <select name="menu"> <!-- div#service_box, 1100 x 81.67, color: #555555, line-height: 18px -->
+                <option value="선택1" selected>전체</option>
+                <option value="선택2">공정거래</option>
+                <option value="선택3">관세·국제통상</option>
+                <option value="선택3">금융·자본시장</option>
+                <option value="선택4">기업자문</option>
+                <option value="선택5">소송·중재</option>
+                <option value="선택6">인사·노동</option>
+                <option value="선택7">조세</option>
+                <option value="선택8">지식재산권</option>
+                <option value="선택9">형사</option>
+                <option value="선택10">건설</option>
+                <option value="선택11">게임</option>
+                <option value="선택12">금융·자본시장</option>
+                <option value="선택13">모빌리티</option>
+                <option value="선택14">방위산업</option>
+                <option value="선택15">부동산</option>             
+                </select>
+              <input type="text" placeholder="검색어를 입력해주세요" />
+              <span class="search_icon"></span>
+            </form>
+          </fieldset>
+
+        </div><!--wrapper----->
+      </article>
+</div><!--solutions_wrapper-->
+</div><!--solutions_container-->
+</div><!--header_cover-->
 
 <!-- 전문가 변호사 소개 리스트 영역 -->
+<div class="main_wrapper">
 <main>
   <div class="main_introduce">
     <ul>
@@ -202,14 +335,83 @@
             <P><a href="#"><span>E.</span> hskang@hwawoo.com</a></p>
         </li>
       </ul>
-    </div> 
+      </div><!--main introduce-->
+   
+    
+  
+    <div class="view_all">
+      <a href="#">
+        <i></i>
+        <p>더보기  </p>
+      </a>
+    </div>
+  </main>
+  </div><!--main_wrapper-->
 
+   <!------------------footer--------------------->
+    <!-- footer 영역 -->
 
-  <div class="main_wrapper">
-  <div class="main_box">
-    <h1>더보기</h1>
-  </div>
-</div>
-</main>
+    <footer>
+      <div class="top_btn">
+        <h1><a href="#">↑</a></h1>
+      </div>
+      <div class="mainfooter">
 
- 
+        <div class="subcontainer">
+          <div class="inner">
+            <ul>
+              <li><a href="#">#Seoul</a></li>
+              <li><a href="#">#Tashkent</a></li>
+              <li><a href="#">#Ho Chi Minh City</a></li>
+              <li><a href="#">#Hanoi</a></li>
+              <li><a href="#">#Jakarta</a></li>
+            </ul>
+          </div>
+
+          <!--inner-->
+          <div class="footer_grid">
+            <ul class="footer_grid1">
+              <li class="footerlogo"></li>
+            </ul>
+            <ul class="footer_grid2">
+              <li class="family">Family Sites</li>
+              <li><a href="#">특허법인화우</a></li>
+              <li><a href="#">관세법인화우</a></li>
+              <li><a href="#">세무법인화우</a></li>
+              <li><a href="#">화우공익재단</a></li>
+            </ul>
+
+            <ul class="footer_grid3">
+              <li>서울시 강남구 영동대로 517 아셈타워 6, 17, 18, 19, 22, 23, 34층</li>
+              <li><strong>Tel.</strong> 02 6003 7000</li>
+              <li><strong>Fax.</strong> 02 6003 7800</li>
+              <li><strong>E-mail.</strong> hwawoo@hwawoo.com</li>
+            </ul>
+
+            <ul class="footer_grid4 grid4_box">
+              <li><a href="#" class="in"></a></li>
+              <li><a href="#" class="youtube"></a></li>
+            </ul>
+
+            <ul class="footer_grid5">
+              <li>ⓒ COPYRIGHT 2022. YOON & YANG LLC. ALL RIGHTS RESERVED.</li>
+            </ul>
+
+            <ul class="footer_grid6">
+              <li>오시는길</li>
+              <li>유한책임</li>
+              <li>면책공고</li>
+              <li>개인정보 처리방침</li>
+              <li>국제정보보호인증</li>
+              <li>웹접근성</li>
+            </ul>
+
+            <!--footer_grid-->
+          </div>
+          <!--subcontainer-->
+        </div>
+        <!--mainfooter-->
+      </div>
+    </footer>
+  </body>
+</html>
