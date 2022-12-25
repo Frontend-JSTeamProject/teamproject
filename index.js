@@ -148,7 +148,7 @@ const mainObserver1 = new IntersectionObserver(entries => {
 }, mainOptions1);
 
 // 소제목
-const mainTitle1 = document.querySelectorAll('#main_highlights h2, #main_centers h2, .main_insights_inner h3, .main_insights_bg, .main_insights_slide_list, .insights_arrow_box, .view_all_btn, .main_careers_inner h1, .careers_slider');
+const mainTitle1 = document.querySelectorAll('#main_highlights h2, #main_centers h2, .main_insights_inner h3, .main_insights_bg, .main_insights_slide_list, .insights_arrow_box, .view_all_btn, .main_careers_inner h1');
 console.log(mainTitle1);
 
 mainTitle1.forEach(el => mainObserver1.observe(el));
@@ -512,7 +512,7 @@ addEventListener('scroll', () => {
 });
 
 // CARRERS SWIPER
-
+/*
 var swiper = new Swiper(".careers_swiper", {
   loop: true,
   effect: 'fade',
@@ -536,4 +536,110 @@ var swiper = new Swiper(".careers_swiper", {
   }
   },
 
+});
+*/
+// career 스크롤 이벤트
+const mainOptions4 = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.05,
+};
+
+const mainObserver4 = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+    }
+  });
+}, mainOptions4);
+// main_center 스크롤 이벤트
+const scrollevent = document.querySelectorAll(
+  '.careers_bg, .career_swiper_wrapper'
+);
+scrollevent.forEach(el => mainObserver4.observe(el));
+
+
+// career 슬라이드
+const careersPrevBtn = document.querySelectorAll('.prev_btn');
+const careersNextBtn = document.querySelectorAll('.next_btn');
+const careersWrapper = document.querySelector('.career_swiper_wrapper');
+const careersSlider = document.querySelector('.careers_slider');
+const careersSlideLeft = document.querySelectorAll('.careers_info');
+const careersSlideRight = document.querySelectorAll('.img_banner');
+const careersActive = document.querySelectorAll('.careers_swiper_slider')
+console.log(careersPrevBtn);
+
+// 이전 버튼
+careersPrevBtn[0].addEventListener('click', () => {
+  careersActive[0].classList.remove('show');
+  careersActive[2].classList.add('show');
+});
+
+careersPrevBtn[1].addEventListener('click', () => {
+  careersActive[1].classList.remove('show');
+  careersActive[0].classList.add('show');
+});
+
+careersPrevBtn[2].addEventListener('click', () => {
+  careersActive[2].classList.remove('show');
+  careersActive[1].classList.add('show');
+});
+
+// 다음 버튼
+careersNextBtn[0].addEventListener('click', () => {
+  careersActive[0].classList.remove('show');
+  careersActive[1].classList.add('show');
+});
+
+careersNextBtn[1].addEventListener('click', () => {
+  careersActive[1].classList.remove('show');
+  careersActive[2].classList.add('show');
+});
+
+careersNextBtn[2].addEventListener('click', () => {
+  careersActive[2].classList.remove('show');
+  careersActive[0].classList.add('show');
+});
+
+// 나타나기
+careersPrevBtn[0].addEventListener('click', () => {
+  careersSlideLeft[2].classList.add('move');
+  careersSlideRight[2].classList.add('move');
+  careersSlideLeft[0].classList.remove('move');
+  careersSlideRight[0].classList.remove('move');
+});
+
+careersPrevBtn[1].addEventListener('click', () => {
+  careersSlideLeft[1].classList.remove('move');
+  careersSlideRight[1].classList.remove('move');
+  careersSlideLeft[0].classList.add('move');
+  careersSlideRight[0].classList.add('move');
+});
+
+careersPrevBtn[2].addEventListener('click', () => {
+  careersSlideLeft[2].classList.remove('move');
+  careersSlideRight[2].classList.remove('move');
+  careersSlideLeft[1].classList.add('move');
+  careersSlideRight[1].classList.add('move');
+});
+
+careersNextBtn[0].addEventListener('click', () => {
+  careersSlideLeft[0].classList.remove('move');
+  careersSlideRight[0].classList.remove('move');
+  careersSlideLeft[1].classList.add('move');
+  careersSlideRight[1].classList.add('move');
+});
+
+careersNextBtn[1].addEventListener('click', () => {
+  careersSlideLeft[1].classList.remove('move');
+  careersSlideRight[1].classList.remove('move');
+  careersSlideLeft[2].classList.add('move');
+  careersSlideRight[2].classList.add('move');
+});
+
+careersNextBtn[2].addEventListener('click', () => {
+  careersSlideLeft[2].classList.remove('move');
+  careersSlideRight[2].classList.remove('move');
+  careersSlideLeft[0].classList.add('move');
+  careersSlideRight[0].classList.add('move');
 });
