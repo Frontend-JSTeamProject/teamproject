@@ -33,18 +33,17 @@ headerLang.addEventListener('click', () => {
   headerLang.classList.toggle('active');
 });
 
-
 // side_bar
 const sideBar = document.querySelector('.side_bar');
 const sideBarSearch = document.querySelector('.side_bar_search');
-const sideBarTxt = document.querySelector('.side_bar_search > span')
+const sideBarTxt = document.querySelector('.side_bar_search > span');
 
-addEventListener("wheel", (e) => {
+addEventListener('wheel', e => {
   console.log(e.deltaY, e.deltaX);
   //양수면 휠 다운 / 음수는 휠 업
 
-  if(e.deltaY > 1) {
-    console.log(sideBar)
+  if (e.deltaY > 1) {
+    console.log(sideBar);
     sideBar.style.top = '0';
     sideBarSearch.style.height = '8rem';
     sideBarTxt.style.opacity = '0';
@@ -65,7 +64,6 @@ const mainMenuCloseIcon = document.querySelector('.icon_close');
 const body = document.querySelector('body');
 // const mainSubMenu = document.querySelector('.gnb_menu_inner');
 
-
 mainMenuOpenIcon.addEventListener('click', e => {
   mainSubMenuPge.classList.add('open');
   body.classList.add('no_scroll');
@@ -74,8 +72,6 @@ mainMenuCloseIcon.addEventListener('click', e => {
   mainSubMenuPge.classList.remove('open');
   body.classList.remove('no_scroll');
 });
-
-
 
 // progressBar
 const progressBar = document.querySelector('.progressBar');
@@ -148,7 +144,9 @@ const mainObserver1 = new IntersectionObserver(entries => {
 }, mainOptions1);
 
 // 소제목
-const mainTitle1 = document.querySelectorAll('#main_highlights h2, #main_centers h2, .main_insights_inner h3, .main_insights_bg, .main_insights_slide_list, .insights_arrow_box, .view_all_btn, .main_careers_inner h1');
+const mainTitle1 = document.querySelectorAll(
+  '#main_highlights h2, #main_centers h2, .main_insights_inner h3, .main_insights_bg, .main_insights_slide_list, .insights_arrow_box, .view_all_btn, .main_careers_inner h1'
+);
 console.log(mainTitle1);
 
 mainTitle1.forEach(el => mainObserver1.observe(el));
@@ -202,24 +200,70 @@ const hlSlideScrollBtn = document.querySelector(
 );
 const hlSlide = document.querySelector('.highlights_slide_wrapper');
 const hlSlideBtnWrap = document.querySelector('#main_highlights .hl_scrollbar_wrapper');
-
-const hlSlideMove = e => {
-  hlSlideScrollBtn.style.transform = `translate(${e.clientX - 1300}px)`;
-  hlSlide.style.transform = `translate(-${e.clientX - 1300}px)`;
-};
-console.log(hlSlideScrollBtn.offsetLeft);
-hlSlideScrollBtn.addEventListener('mousedown', e => {
-  let num = e.clientX;
-  console.log(e.clientX);
-  if (num <= 1615 || num >= 1186) {
-    addEventListener('mousemove', hlSlideMove);
-    addEventListener('mouseup', () => {
-      removeEventListener('mousemove', hlSlideMove);
-    });
-  } else if (num > 1615 || num < 1186) {
-    e.target.style.transform = `translate(${e.clientX}px)`;
-  }
+const hlSlideWrap = document.querySelector('#main_highlights .highlights_slide_wrapper');
+hlSlideScrollBtn.addEventListener('click', () => {
+  hlSlideScrollBtn.classList.toggle('active');
+  hlSlideWrap.classList.toggle('translate');
 });
+// const hlSlideMove = e => {
+//   hlSlideScrollBtn.style.transform = `translateX(${e.clientX - 1300}px)`;
+//   hlSlide.style.transform = `translateX(-${e.clientX - 1300}px)`;
+//   console.log('좌표:', e.clientX);
+// };
+
+// hlSlideScrollBtn.addEventListener('mousedown', e => {
+//   const mouseX = e.clientX - 1300; // 마우스 X좌표
+
+//   console.log(mouseX); // 좌표 바뀌는거 확인 하는 용도
+//   hlSlideScrollBtn.addEventListener('mousemove', () => {
+//     hlSlideScrollBtn.style.left = mouseX + 'px';
+//   });
+// });
+
+// hlSlideScrollBtn.addEventListener('mousedown', e => {
+//   const dragX = e.clientX; // 드래그버튼 X좌표
+
+//   console.log('드래그버튼:', dragX);
+
+//   hlSlideScrollBtn.addEventListener('mousemove', () => {
+//     let i = dragX;
+//     i >= 0;
+//     console.log('dragX:', i);
+//     hlSlideScrollBtn.style.transform = `translateX(${i}px)`;
+//   });
+// hlSlideScrollBtn.addEventListener('mouseup', () => {
+//   removeEventListener('mousemove', () => {
+//     hlSlideScrollBtn.style.transform = `translateX(${mouseX - 1300}px)`;
+//   });
+// });
+// });
+
+// const mqL = matchMedia('(min-width:1897)');
+// const mqS = matchMedia('(max-width:1148)');
+
+// (dragBtn = function () {
+//   if (mqL.matches) {
+//     hlSlideScrollBtn.style.transform = `translateX(${e.clientX - 1662}px)`;
+//   } else if (mqS.matches) {
+//     hlSlideScrollBtn.style.transform = `translateX(${e.clientX - 295}px)`;
+//   }
+// })();
+// dragBtn();
+// addEventListener('resize', dragBtn);
+// hlSlideScrollBtn.addEventListener('mousedown', e => {
+//   let num = e.clientX;
+//   console.log('num:', num);
+//   if (num <= 1728 || num >= 1300) {
+//     addEventListener('mousemove', hlSlideMove);
+//     addEventListener('mouseup', () => {
+//       removeEventListener('mousemove', hlSlideMove);
+//     });
+//   } else if (num > 1728) {
+//     hlSlideScrollBtn.style.transform = 'translateX(428px)';
+//   } else if (num < 1300) {
+//     hlSlideScrollBtn.style.transform = 'translateX(0)';
+//   }
+// });
 
 // 스크롤 이벤트3
 const mainOptions3 = {
@@ -473,30 +517,30 @@ addEventListener('scroll', () => {
 // INSIGHTS
 const swiperSlide = document.querySelectorAll('.swiper-slide-active');
 
-var swiper = new Swiper(".myswiper", {
+var swiper = new Swiper('.myswiper', {
   slidesPerView: 3,
   spaceBetween: 30,
   loop: true,
   // loopFillGroupWithBlank: true,
 
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
 });
 
 // LOGOSLIDER
 
-var swiper = new Swiper(".main_logo_slider", {
+var swiper = new Swiper('.main_logo_slider', {
   speed: 50000,
-  loop:true,
-  slidesPerView: "auto",
+  loop: true,
+  slidesPerView: 'auto',
   // loopedSlides: 5, //noSwiping : true,
   autoplay: {
     delay: 0,
     stopOnLastSlide: false,
     disableOnInteraction: true,
-},
+  },
 });
 
 // CAREERS bg
@@ -504,10 +548,10 @@ const career = document.querySelector('.careers_bg_txt');
 
 addEventListener('scroll', () => {
   console.log(scrollY);
-  if(scrollY < 1400) {
+  if (scrollY < 1400) {
     career.style.right = `-70%`;
-  }else if(scrollY >= 1400) {
-    career.style.right = `${(scrollY - 5300)}px`;
+  } else if (scrollY >= 1400) {
+    career.style.right = `${scrollY - 5300}px`;
   }
 });
 
@@ -553,11 +597,8 @@ const mainObserver4 = new IntersectionObserver(entries => {
   });
 }, mainOptions4);
 // main_center 스크롤 이벤트
-const scrollevent = document.querySelectorAll(
-  '.careers_bg, .career_swiper_wrapper'
-);
+const scrollevent = document.querySelectorAll('.careers_bg, .career_swiper_wrapper');
 scrollevent.forEach(el => mainObserver4.observe(el));
-
 
 // career 슬라이드
 const careersPrevBtn = document.querySelectorAll('.prev_btn');
@@ -566,7 +607,7 @@ const careersWrapper = document.querySelector('.career_swiper_wrapper');
 const careersSlider = document.querySelector('.careers_slider');
 const careersSlideLeft = document.querySelectorAll('.careers_info');
 const careersSlideRight = document.querySelectorAll('.img_banner');
-const careersActive = document.querySelectorAll('.careers_swiper_slider')
+const careersActive = document.querySelectorAll('.careers_swiper_slider');
 console.log(careersPrevBtn);
 
 // 이전 버튼

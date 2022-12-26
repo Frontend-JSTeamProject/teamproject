@@ -700,7 +700,10 @@ header .header_container_right #menu span {
   transform: translateX(0);
   opacity: 1;
 }
-
+#main_highlights .highlights_slide_wrapper.translate {
+  transform: translateX(-55%);
+  transition: 1s;
+}
 #main_highlights .highlights_slide_wrapper .hl_slide {
   width: 524px;
   height: 100%;
@@ -806,7 +809,13 @@ header .header_container_right #menu span {
   height: 32px;
   cursor: pointer;
 }
-
+#main_highlights .hl_scrollbar_wrapper .hl_scrollbar .hl_scrollbar_drag.active {
+  transform: translateX(428px);
+  transition: 1s;
+}
+#main_highlights .hl_scrollbar_wrapper .hl_scrollbar .hl_scrollbar_drag.active::after {
+  transform: translateY(-50%) rotate(180deg);
+}
 /************** main_centers **************/
 #main_centers {
   position: relative;
