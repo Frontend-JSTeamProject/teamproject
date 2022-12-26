@@ -231,65 +231,6 @@ hlSlideScrollBtn.addEventListener('click', () => {
   hlSlideScrollBtn.classList.toggle('active');
   hlSlideWrap.classList.toggle('translate');
 });
-// const hlSlideMove = e => {
-//   hlSlideScrollBtn.style.transform = `translateX(${e.clientX - 1300}px)`;
-//   hlSlide.style.transform = `translateX(-${e.clientX - 1300}px)`;
-//   console.log('좌표:', e.clientX);
-// };
-
-// hlSlideScrollBtn.addEventListener('mousedown', e => {
-//   const mouseX = e.clientX - 1300; // 마우스 X좌표
-
-//   console.log(mouseX); // 좌표 바뀌는거 확인 하는 용도
-//   hlSlideScrollBtn.addEventListener('mousemove', () => {
-//     hlSlideScrollBtn.style.left = mouseX + 'px';
-//   });
-// });
-
-// hlSlideScrollBtn.addEventListener('mousedown', e => {
-//   const dragX = e.clientX; // 드래그버튼 X좌표
-
-//   console.log('드래그버튼:', dragX);
-
-//   hlSlideScrollBtn.addEventListener('mousemove', () => {
-//     let i = dragX;
-//     i >= 0;
-//     console.log('dragX:', i);
-//     hlSlideScrollBtn.style.transform = `translateX(${i}px)`;
-//   });
-// hlSlideScrollBtn.addEventListener('mouseup', () => {
-//   removeEventListener('mousemove', () => {
-//     hlSlideScrollBtn.style.transform = `translateX(${mouseX - 1300}px)`;
-//   });
-// });
-// });
-
-// const mqL = matchMedia('(min-width:1897)');
-// const mqS = matchMedia('(max-width:1148)');
-
-// (dragBtn = function () {
-//   if (mqL.matches) {
-//     hlSlideScrollBtn.style.transform = `translateX(${e.clientX - 1662}px)`;
-//   } else if (mqS.matches) {
-//     hlSlideScrollBtn.style.transform = `translateX(${e.clientX - 295}px)`;
-//   }
-// })();
-// dragBtn();
-// addEventListener('resize', dragBtn);
-// hlSlideScrollBtn.addEventListener('mousedown', e => {
-//   let num = e.clientX;
-//   console.log('num:', num);
-//   if (num <= 1728 || num >= 1300) {
-//     addEventListener('mousemove', hlSlideMove);
-//     addEventListener('mouseup', () => {
-//       removeEventListener('mousemove', hlSlideMove);
-//     });
-//   } else if (num > 1728) {
-//     hlSlideScrollBtn.style.transform = 'translateX(428px)';
-//   } else if (num < 1300) {
-//     hlSlideScrollBtn.style.transform = 'translateX(0)';
-//   }
-// });
 
 // 스크롤 이벤트3
 const mainOptions3 = {
@@ -332,32 +273,6 @@ console.log(centerNextBtns);
 console.log(centerSlideInfoes);
 
 // 스와이프 전체
-/* 
-  const centerSlideMove1 = () => {
-    let i = 0;
-    centerSlides[i].classList.remove('active');
-    i--;
-    i < 0 ? (i = centerSlides.length - 1) : false;
-    centerSlides[i].classList.add('active');
-  };
-
-  const centerSlideMove2 = () => {
-    let i = 0;
-    centerSlides[i].classList.remove('active');
-    i++;
-    if (i >= centerSlides.length) {
-      i = 0;
-    }
-    centerSlides[i].classList.add('active');
-  };
-
-  centerPrevBtns.forEach(btn => {
-    btn.addEventListener('click', centerSlideMove1);
-  });
-  centerNextBtns.forEach(btn => {
-    btn.addEventListener('click', centerSlideMove2);
-  }); 
-*/
 
 // center 슬라이드 뒤로 버튼
 centerPrevBtns[0].addEventListener('click', () => {
@@ -412,25 +327,6 @@ centerNextBtns[5].addEventListener('click', () => {
 });
 
 // info 움직임
-/* 
-  (function centerSlideInfoMove() {
-    let i = 0;
-    centerPrevBtns[i].addEventListener('click', () => {
-      centerSlideInfoes[i].classList.remove('active');
-      i--;
-      i < 0 ? (i = centerSlideInfoes.length - 1) : false;
-      centerSlideInfoes[i].classList.add('active');
-    });
-    centerNextBtns[i].addEventListener('click', () => {
-      centerSlideInfoes[i].classList.remove('active');
-      i++;
-      if (i >= centerSlideInfoes.length) {
-        i = 0;
-      }
-      centerSlideInfoes[i].classList.add('active');
-    });
-  })(); 
-*/
 
 // 뒤로 버튼 눌렀을 때 info 효과
 centerPrevBtns[0].addEventListener('click', () => {
