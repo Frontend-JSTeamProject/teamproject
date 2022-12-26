@@ -701,7 +701,7 @@ header .header_container_right #menu span {
   opacity: 1;
 }
 #main_highlights .highlights_slide_wrapper.translate {
-  transform: translateX(-55%);
+  transform: translateX(-57%);
   transition: 1s;
 }
 #main_highlights .highlights_slide_wrapper .hl_slide {
