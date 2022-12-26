@@ -459,6 +459,84 @@ header .header_container_right #menu span {
   background-color: #ffe141;
 }
 
+/* search */
+.serch_wrap {
+  position: fixed;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  z-index: 14;
+  background-color: rgba(28,28,28,.3);
+  visibility: hidden;
+  transition: .3s;
+}
+.serch_wrap.open {
+  opacity: 1;
+  visibility: visible;
+}
+.serch_wrap > a {
+  display: block;
+  position: absolute;
+  left: 4rem; top: 3rem;
+  width: 20rem; height: 4rem;
+  background: url(./images/index_1/ci.svg) no-repeat center;
+  background-size: contain;
+  font-size: 0;
+  z-index: 1;
+  transition: .3s;
+}
+.search_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20rem 0;
+  background-color: #fff;
+  transition: .3s;
+  transition-delay: .3s;
+  transform: translate3d(0,-100%,0);
+}
+.serch_wrap.open .search_box {
+  transform: translate3d(0,0,0);
+}
+.search_input_box {
+  width: 105.6rem;
+  position: relative;
+}
+.search_input_box input {
+  padding-right: 10.5rem;
+  width: 100%; height: 7.2rem;
+  padding: 0 6.2rem 0 2rem;
+  background-color: #fff;
+  border: 0.2rem solid #1c1c1c;
+  font-size: 2.4rem;
+  outline: 0;
+}
+.text_reset_icon {
+  display: none;
+  right: 7.5rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3.2rem; height: 3.2rem;
+  background-image: url(./images/index_1/다운로드.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+.search_icon_big {
+  position: absolute;
+  right: 2rem; top: 50%;
+  transform: translateY(-50%);
+  width: 3.8rem; height: 3.8rem;
+  outline-offset: -2px;
+  display: inline-block;
+  background-image: url(./images/data_image_svg+xml_search.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: .2s;
+  cursor: pointer;
+}
+
 /************** main **************/
 #main {
   position: relative;
