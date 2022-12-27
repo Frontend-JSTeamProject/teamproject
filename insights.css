@@ -715,6 +715,7 @@ background-image: url(./images/t.svg);
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
+  border:none;
 }
 .search_icon_big {
   position: absolute;

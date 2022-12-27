@@ -405,6 +405,7 @@ header .header_container_right #menu span {
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
+  border:none;
 }
 .search_icon_big {
   position: absolute;
