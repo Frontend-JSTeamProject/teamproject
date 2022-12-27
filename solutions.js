@@ -72,6 +72,33 @@ addEventListener('wheel', e => {
   }
 });
 
+// search
+const serachPage = document.querySelector('.serch_wrap');
+const searchOpenIcon = document.querySelector('.header_search');
+const searchCloseIcon = document.querySelector('.search_box > .icon_close');
+const headerMenu = document.querySelector('header')
+const searchBox = document.querySelector('.search_box')
+const resetBtn = document.querySelector('.text_reset_icon');
+const inputBox = document.querySelector('#searchWord')
+
+searchOpenIcon.addEventListener('click', e => {
+  e.preventDefault();
+  serachPage.classList.add('open');
+  headerMenu.style.display='none';
+});
+searchCloseIcon.addEventListener('click', e => {
+  e.preventDefault();
+  serachPage.classList.remove('open');
+  headerMenu.style.display='flex';
+  searchBox.style.transition = '.1s';
+  serachPage.style.transition = '.1s';
+});
+inputBox.addEventListener('click', e => {
+  resetBtn.style.display='block';
+
+});
+
+
 // Main Sub-Menu Page
 const mainSubMenuPge = document.querySelector('.main_menu_page');
 const mainMenuOpenIcon = document.querySelector('#menu');

@@ -341,6 +341,90 @@ header .header_container_right #menu span {
   background-image: url(./images/t.svg);
 }
 
+
+/* search */
+.serch_wrap {
+  position: fixed;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  z-index: 14;
+  background-color: rgba(28,28,28,.3);
+  visibility: hidden;
+  transition: .3s;
+}
+.serch_wrap.open {
+  opacity: 1;
+  visibility: visible;
+}
+.serch_wrap > a {
+  display: block;
+  position: absolute;
+  left: 40px; top: 30px;
+  width: 200px; height: 40px;
+  background: url(./images/index_1/ci.svg) no-repeat center;
+  background-size: contain;
+  font-size: 0;
+  z-index: 1;
+  transition: .3s;
+}
+.search_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 200px 0;
+  background-color: #fff;
+  transition: .3s;
+  transition-delay: .3s;
+  transform: translate3d(0,-100%,0);
+}
+.serch_wrap.open .search_box {
+  transform: translate3d(0,0,0);
+}
+.search_input_box {
+  width: 1056px;
+  position: relative;
+}
+.search_input_box input {
+  padding-right: 105px;
+  width: 100%; height: 72px;
+  padding: 0 62px 0 20px;
+  background-color: #fff;
+  border: 2px solid #1c1c1c;
+  font-size: 24px;
+  outline: 0;
+}
+.text_reset_icon {
+  display: none;
+  right: 75px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px; height: 32px;
+  background-image: url(./images/index_1/다운로드.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  border:none;
+}
+.search_icon_big {
+  position: absolute;
+  right: 20px; top: 50%;
+  transform: translateY(-50%);
+  width: 38px; height: 38px;
+  outline-offset: -2px;
+  display: inline-block;
+  background-image: url(./images/data_image_svg+xml_search.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: .2s;
+  cursor: pointer;
+  border:none;
+}
+
+
+
+
 /*---- Main Sub-Menu Page ----*/
 .main_page {
   position: relative;
