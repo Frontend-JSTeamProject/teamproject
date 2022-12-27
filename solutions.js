@@ -72,33 +72,6 @@ addEventListener('wheel', e => {
   }
 });
 
-// search
-const serachPage = document.querySelector('.serch_wrap');
-const searchOpenIcon = document.querySelector('.header_search');
-const searchCloseIcon = document.querySelector('.search_box > .icon_close');
-const headerMenu = document.querySelector('header')
-const searchBox = document.querySelector('.search_box')
-const resetBtn = document.querySelector('.text_reset_icon');
-const inputBox = document.querySelector('#searchWord')
-
-searchOpenIcon.addEventListener('click', e => {
-  e.preventDefault();
-  serachPage.classList.add('open');
-  headerMenu.style.display='none';
-});
-searchCloseIcon.addEventListener('click', e => {
-  e.preventDefault();
-  serachPage.classList.remove('open');
-  headerMenu.style.display='flex';
-  searchBox.style.transition = '.1s';
-  serachPage.style.transition = '.1s';
-});
-inputBox.addEventListener('click', e => {
-  resetBtn.style.display='block';
-
-});
-
-
 // Main Sub-Menu Page
 const mainSubMenuPge = document.querySelector('.main_menu_page');
 const mainMenuOpenIcon = document.querySelector('#menu');
@@ -113,6 +86,31 @@ mainMenuOpenIcon.addEventListener('click', () => {
 mainMenuCloseIcon.addEventListener('click', () => {
   mainSubMenuPge.classList.remove('open');
   body.classList.remove('no_scroll');
+});
+
+// search
+const serachPage = document.querySelector('.serch_wrap');
+const searchOpenIcon = document.querySelector('.header_search');
+const searchCloseIcon = document.querySelector('.search_box > .icon_close');
+const headerMenu = document.querySelector('header');
+const searchBox = document.querySelector('.search_box');
+const resetBtn = document.querySelector('.text_reset_icon');
+const inputBox = document.querySelector('#searchWord');
+
+searchOpenIcon.addEventListener('click', e => {
+  e.preventDefault();
+  serachPage.classList.add('open');
+  headerMenu.style.display = 'none';
+});
+searchCloseIcon.addEventListener('click', e => {
+  e.preventDefault();
+  serachPage.classList.remove('open');
+  headerMenu.style.display = 'flex';
+  searchBox.style.transition = '.1s';
+  serachPage.style.transition = '.1s';
+});
+inputBox.addEventListener('click', e => {
+  resetBtn.style.display = 'block';
 });
 
 // solution 하위메뉴
@@ -130,13 +128,50 @@ scrollSolutionPop.addEventListener('click', () => {
 });
 
 // tab 하위메뉴
-const tabList = document.querySelector('main .tab_item_wrapper #tab_item1 li:first-child');
-const tabListTitle = document.querySelector('main .tab_item_wrapper #tab_item1 li:first-child > a');
+const tabLists = document.querySelectorAll('main .tab_item_wrapper .tab_item > li');
+console.log(tabLists);
+const tabListTitles = document.querySelectorAll('main .tab_item_wrapper .tab_item li > a');
+console.log(tabListTitles);
+const tabAll = document.querySelector('main .wrapper .tab_wrapper .tab_all');
 
-tabList.addEventListener('click', () => {
-  tabList.classList.toggle('on');
+tabLists[0].addEventListener('click', () => {
+  tabLists[0].classList.toggle('on');
+});
+tabLists[1].addEventListener('click', () => {
+  tabLists[1].classList.toggle('on');
+});
+tabLists[2].addEventListener('click', () => {
+  tabLists[2].classList.toggle('on');
+});
+tabLists[3].addEventListener('click', () => {
+  tabLists[3].classList.toggle('on');
+});
+tabLists[4].addEventListener('click', () => {
+  tabLists[4].classList.toggle('on');
+});
+tabLists[5].addEventListener('click', () => {
+  tabLists[5].classList.toggle('on');
+});
+tabLists[6].addEventListener('click', () => {
+  tabLists[6].classList.toggle('on');
+});
+tabLists[7].addEventListener('click', () => {
+  tabLists[7].classList.toggle('on');
+});
+tabLists[8].addEventListener('click', () => {
+  tabLists[8].classList.toggle('on');
 });
 
-tabListTitle.addEventListener('click', e => {
-  e.preventDefault();
+// tab all
+tabAll.addEventListener('click', () => {
+  tabLists.forEach(el => {
+    el.classList.toggle('on');
+  });
+});
+
+// a 초기화
+tabListTitles.forEach(el => {
+  el.addEventListener('click', e => {
+    e.preventDefault();
+  });
 });

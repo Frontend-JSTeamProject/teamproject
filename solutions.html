@@ -13,16 +13,21 @@
     <link rel="stylesheet" href="./solutions.css" />
     <!-- script -->
     <script defer src="./solutions.js"></script>
-    
+
     <!-- open graph -->
-    <meta property ="og:title" content="법무법인 화우">
-    <meta property ="og:url" content="https://frontend-jsteamproject.github.io/teamproject/solutions.html">
-    <meta property ="og:image" content="./images/openGraph/openGraph.png">
-    <meta property ="og:description" content="최적의 솔루션을 제공합니다.">
-    <meta property ="og:type" content="website">
+    <meta property="og:title" content="법무법인 화우" />
+    <meta
+      property="og:url"
+      content="https://frontend-jsteamproject.github.io/teamproject/solutions.html" />
+    <meta property="og:image" content="./images/openGraph/openGraph.png" />
+    <meta property="og:description" content="최적의 솔루션을 제공합니다." />
+    <meta property="og:type" content="website" />
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="./images/favicon_io/android-chrome-192x192.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./images/favicon_io/android-chrome-192x192.png"
+      type="image/x-icon" />
   </head>
 
   <body>
@@ -95,7 +100,6 @@
         </button>
       </div>
     </div>
-    
 
     <!-- Main Sub-Menu Page-->
     <div class="main_page">
@@ -172,20 +176,19 @@
     </div>
 
     <!-- search -->
-<form>
-  <div class="serch_wrap">
-    <a href="#">법무법인</a>
-    <div class="search_box">
-      <button class="icon_close"></button>
-      <div class="search_input_box">
-        <input type="text" placeholder="검색어를 입력해주세요" id="searchWord">
-        <button type="reset" class="text_reset_icon"></button>
-        <button class="search_icon_big"></button>
+    <form>
+      <div class="serch_wrap">
+        <a href="#">법무법인</a>
+        <div class="search_box">
+          <button class="icon_close"></button>
+          <div class="search_input_box">
+            <input type="text" placeholder="검색어를 입력해주세요" id="searchWord" />
+            <button type="reset" class="text_reset_icon"></button>
+            <button class="search_icon_big"></button>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  </form>
-
+    </form>
 
     <!-- solution_main -->
     <div class="solutions_container">
@@ -223,21 +226,21 @@
 
             <div class="tab_wrapper">
               <ul id="tab_menu">
-                <li id="tab1"><a href="#" class="subject">분야별</a></li>
-                <li id="tab2"><a href="#">산업별</a></li>
-                <li id="tab3"><a href="#">국가별</a></li>
-                <li id="tab4"><a href="#">센터</a></li>
-                <li id="tab5"><a href="#">전체</a></li>
+                <li><a href="#" class="tab subject">분야별</a></li>
+                <li><a href="#" class="tab">산업별</a></li>
+                <li><a href="#" class="tab">국가별</a></li>
+                <li><a href="#" class="tab">센터</a></li>
+                <li><a href="#" class="tab">전체</a></li>
               </ul>
               <div class="tab_all">전체 펼침</div>
               <!--------------분야별------------------>
-              <div class="tab_item_container">
+              <div class="tab_item_container on">
                 <div class="tab_item_wrapper">
-                  <ul id="tab_item1">
+                  <ul class="tab_item">
                     <li>
                       <a href="#">공정거래</a>
                       <div class="item_accordion">
-                        <ul class="item_1">
+                        <ul class="item_list">
                           <li>공정거래</li>
                           <li>공정거래분쟁</li>
                           <li>공정거래 컴플라이언스</li>
@@ -254,16 +257,160 @@
                         </ul>
                       </div>
                     </li>
-                    <li><a href="#">금융·자본시장</a></li>
-                    <li><a href="#">소송·중재</a></li>
-                    <li><a href="#">조세</a></li>
-                    <li><a href="#">형사</a></li>
+                    <li>
+                      <a href="#">금융 · 자본시장</a>
+                      <div class="item_accordion">
+                        <ul class="item_list">
+                          <li>금융 ∙ 자본시장</li>
+                          <li>금융 컴플라이언스</li>
+                          <li>금융분쟁 ∙ 소송</li>
+                          <li>금융소비자보호규제</li>
+                          <li>금융투자회사</li>
+                          <li>금융회사 검사 ∙ 제재</li>
+                          <li>금융회사 인허가</li>
+                          <li>금융회사 M&A</li>
+                          <li>사모투자</li>
+                          <li>신탁</li>
+                          <li>디지털금융</li>
+                          <li>보험</li>
+                          <li>부동산금융 ∙ 부동산투자</li>
+                          <li>불공정거래조사 ∙ 회계감리</li>
+                          <li>여신전문금융회사 ∙ 저축은행</li>
+                          <li>은행 ∙ 금융지주</li>
+                          <li>인수금융</li>
+                          <li>자금세탁방지</li>
+                          <li>파생상품</li>
+                          <li>프로젝트파이낸스</li>
+                          <li>IPO ∙ 상장실질심사</li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#">소송 · 중재</a>
+                      <div class="item_accordion">
+                        <ul class="item_list">
+                          <li>소송 ∙ 중재</li>
+                          <li>가사</li>
+                          <li>건설</li>
+                          <li>공정거래 소송</li>
+                          <li>국제중재 ∙ 국제소송</li>
+                          <li>금융 ∙ 자본시장 분쟁</li>
+                          <li>기업형사</li>
+                          <li>물류분쟁</li>
+                          <li>미디어 · 커뮤니케이션 분쟁</li>
+                          <li>상사 ∙ 건설 중재</li>
+                          <li>상사 ∙ 경영권 분쟁</li>
+                          <li>스포츠 ∙ 엔터테인먼트</li>
+                          <li>인사노무 소송</li>
+                          <li>제조물책임</li>
+                          <li>조세소송</li>
+                          <li>집단 ∙ 단체 소송</li>
+                          <li>행정쟁송</li>
+                          <li>헌법소송</li>
+                          <li>헬스케어 분쟁</li>
+                          <li>형사공판</li>
+                          <li>환경 ∙ 에너지 분쟁</li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#">조세</a>
+                      <div class="item_accordion">
+                        <ul class="item_list">
+                          <li>조세</li>
+                          <li>가업승계</li>
+                          <li>국제조세 ∙ 이전가격</li>
+                          <li>사전진단 ∙ 세무조사</li>
+                          <li>조세소송</li>
+                          <li>조세심판</li>
+                          <li>조세형사</li>
+                          <li>조세자문 ∙ 조세전략</li>
+                          <li>세무신고 ∙ 아웃소싱</li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#">형사</a>
+                      <div class="item_accordion">
+                        <ul class="item_list">
+                          <li>형사</li>
+                          <li>건설 ∙ 부동산</li>
+                          <li>공정거래</li>
+                          <li>금융</li>
+                          <li>기업일반</li>
+                          <li>산업안전 ∙ 중대재해</li>
+                          <li>선거 ∙ 노동</li>
+                          <li>제약 ∙ 의료 ∙ 식품</li>
+                          <li>조세 ∙ 관세 ∙ 외환</li>
+                          <li>지식재산</li>
+                          <li>형사 컴플라이언스</li>
+                          <li>형사공판</li>
+                          <li>환경</li>
+                        </ul>
+                      </div>
+                    </li>
                   </ul>
-                  <ul id="tab_item2">
-                    <li><a href="#">관세·국제통상</a></li>
-                    <li><a href="#">기업자문</a></li>
-                    <li><a href="#">인사·노동</a></li>
-                    <li><a href="#">지식재산권</a></li>
+                  <ul class="tab_item">
+                    <li>
+                      <a href="#">관세·국제통상</a>
+                      <div class="item_accordion">
+                        <ul class="item_list">
+                          <li>관세 ∙ 국제통상</li>
+                          <li>관세심사 ∙ 관세조사</li>
+                          <li>관세 불복 ∙ 유권해석</li>
+                          <li>외환조사 ∙ 외환검사</li>
+                          <li>이전가격</li>
+                          <li>품목분류</li>
+                          <li>FTA ∙ 무역통상</li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#">기업자문</a>
+                      <div class="item_accordion">
+                        <ul class="item_list">
+                          <li>기업자문</li>
+                          <li>경영권 분쟁</li>
+                          <li>기업 지배구조</li>
+                          <li>도산 ∙ 기업회생</li>
+                          <li>법제컨설팅</li>
+                          <li>외국인투자</li>
+                          <li>컴플라이언스</li>
+                          <li>M&A</li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#">인사 · 노동</a>
+                      <div class="item_accordion">
+                        <ul class="item_list">
+                          <li>인사 · 노동</li>
+                          <li>근로감독대응</li>
+                          <li>기업인수합병과 노동</li>
+                          <li>노동분쟁</li>
+                          <li>불법파견 ∙ 비정규직</li>
+                          <li>산업안전 ∙ 중대재해</li>
+                          <li>성희롱 ∙ 직장내 괴롭힘</li>
+                          <li>집단노사관계</li>
+                          <li>HR 일반</li>
+                          <li>HR컴플라이언스</li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <a href="#">지식재산권</a>
+                      <div class="item_accordion">
+                        <ul class="item_list">
+                          <li>지식재산권</li>
+                          <li>상표 ∙ 디자인 ∙ 부정경쟁</li>
+                          <li>영업비밀 ∙ 산업기술</li>
+                          <li>저작권</li>
+                          <li>특허 ∙ 실용신안</li>
+                          <li>IP Compliance</li>
+                          <li>IP License</li>
+                        </ul>
+                      </div>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -284,7 +431,6 @@
         <h1><a href="#">↑</a></h1>
       </div>
       <div class="mainfooter">
-
         <div class="subcontainer">
           <div class="inner">
             <ul>
