@@ -14,13 +14,10 @@
   <link rel="stylesheet" href="./professionals.css" />
   <!-- script -->
   <script defer src="./professionals.js"></script>
-  <!-- aos -->
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <!-- open graph -->
   <meta property ="og:title" content="법무법인 화우">
-  <meta property ="og:url" content="https://frontend-jsteamproject.github.io/teamproject/thefirm.html">
+  <meta property ="og:url" content="https://frontend-jsteamproject.github.io/teamproject/professionals.html">
   <meta property ="og:image" content="./images/openGraph/openGraph.png">
   <meta property ="og:description" content="최적의 솔루션을 제공합니다.">
   <meta property ="og:type" content="website">
@@ -30,25 +27,10 @@
 </head>
 
 <body>
-<div class="header_cover">
+
   <header>
-    <ul id="header_nav_list">
-      <li class="home">
-        <a href="./index.html">Home</a>
-      </li>
-      <li class="solution_pop">
-        <div class="solution">Solutions</div>
-        <ul id="header_solutions_nav_list">
-          <li><a href="./solutions.html" class="strong">Solutions</a></li>
-          <li><a href="./professionals.html">Professionals</a></li>
-          <li><a href="./insights.html">Insights</a></li>
-          <li><a href="./thefirm.html">The Firm</a></li>
-        </ul>
-      </li>
-    </ul>
     <div class="gnb_wrapper">
       <h1><a href="./index.html"></a></h1>
-
       <div class="header_container_right">
         <!-- 대메뉴 -->
         <ul id="list">
@@ -98,6 +80,22 @@
       </button>
     </div>
   </div>
+
+<!-- search -->
+<form>
+  <div class="serch_wrap">
+    <a href="#">법무법인</a>
+    <div class="search_box">
+      <button class="icon_close"></button>
+      <div class="search_input_box">
+        <input type="text" placeholder="검색어를 입력해주세요" id="searchWord">
+        <button type="reset" class="text_reset_icon"></button>
+        <button class="search_icon_big"></button>
+      </div>
+    </div>
+  </div>
+  </form>
+
 
   <!-- Main Sub-Menu Page-->
   <div class="main_page">
@@ -173,28 +171,20 @@
     </div>
   </div>
 
-  <!-- solution_main -->
-  <div class="solutions_container">
-    <div class="solutions_wrapper">
-      
-      <!---------------------------------------------------------------------->
-      <article>
-      <div class="tab_wrapper">
-        <ul id="tab_menu">
-          <li id="tab1"><a href="#" class="subject">전체</a></li>
-          <li id="tab2"><a href="#">분야별</a></li>
-          <li id="tab3"><a href="#">산업별</a></li>
-          <li id="tab4"><a href="#">국가별</a></li>
-          <li id="tab5"><a href="#">센터</a></li>
-        </ul>
-      </div><!--tab_wrapper-->
+  <!-- professionals_main -->
+  <div class="professionals_container">
+      <div class="header_cover">
+        <article class="tab_container">
+          <ul id="tab_menu">
+            <li id="tab1"><a href="#" class="subject">전체</a></li>
+            <li id="tab2"><a href="#">분야별</a></li>
+            <li id="tab3"><a href="#">산업별</a></li>
+            <li id="tab4"><a href="#">국가별</a></li>
+            <li id="tab5"><a href="#">센터</a></li>
+          </ul>
 
-
-  
-        <div class="wrapper">
           <fieldset class="search">
-            
-            <form>
+            <div class="select_box">
               <select name="menu"> <!-- div#service_box, 1100 x 81.67, color: #555555, line-height: 18px -->
                 <option value="선택1" selected>전체</option>
                 <option value="선택2">공정거래</option>
@@ -212,142 +202,291 @@
                 <option value="선택13">모빌리티</option>
                 <option value="선택14">방위산업</option>
                 <option value="선택15">부동산</option>             
-                </select>
+              </select>
+            </div>
+            <div class="input_box">
               <input type="text" placeholder="검색어를 입력해주세요" />
               <span class="search_icon"></span>
-            </form>
+            </div>
           </fieldset>
 
-        </div><!--wrapper----->
+        </div><!-- search_wrapper ----->
       </article>
-</div><!--solutions_wrapper-->
-</div><!--solutions_container-->
-</div><!--header_cover-->
+   
+
 
 <!-- 전문가 변호사 소개 리스트 영역 -->
-<div class="main_wrapper">
-<main>
-  <div class="main_introduce">
-    <ul>
-        <li>
-            <a href="#"><figure><img src="./images/1_photo_20151106050544.jpg" alt="img1"></figure></a>
-            <h1><a href="#">강동희</a></h1>
-            <p class="lawyer">변호사</p>
-            <p><a href="#"><span>T.</span> 02 6182 8518</a></p>
-            <P><a href="#"><span>E.</span> dhkang@yoonyang.com</a></p>
-        </li>
-        <li>
-            <a href="#"><figure><img src="./images/2_photo_20160608102623.jpg" alt="img2"></figure></a>
-            <h1><a href="#">강민화</a></h1>
-            <p class="lawyer">변호사</p>
-            <p><a href="#"><span>T.</span> 02 6182 8344</a></p>
-            <P><a href="#"><span>E.</span> minkang@hwawoo.com</a></p>
-        </li>
-        <li>
-            <a href="#"><figure><img src="./images/3_photo_20180425060241.jpg" alt="img3"></figure></a>
-            <h1><a href="#">강보라</a></h1>
-            <p class="lawyer">변호사</p>
-            <p><a href="#"><span>T.</span> 02 6182 8166</a></p>
-            <P><a href="#"><span>E.</span> brkang@yoonyang.com</a></p>
-        </li>
-        <li>
-            <a href="#"><figure><img src="./images/4_photo_20220509101825.jpg" alt="img4"></figure></a>
-            <h1><a href="#">강석준</a></h1>
-            <p class="lawyer">변호사</p>
-            <p><a href="#"><span>T.</span> 02 6182 8505</a></p>
-            <P><a href="#"><span>E.</span> kangsj@yoonyang.com</a></p>
-        </li>
-        <li>
-            <a href="#"><figure><img src="./images/5_photo_20210422023606.jpg" alt="img5"></figure></a>
-            <h1><a href="#">강성구</a></h1>
-            <p class="lawyer">변호사</p>
-            <p><a href="#"><span>T. </span>02 6182 8336</a></p>
-            <P><a href="#"><span>E. </span>kangsg@hwawoo.com</a></p>
-        </li>
-        <li>
-            <a href="#"><figure><img src="./images/6_photo_20150323095638.jpg" alt="img6"></figure></a>
-            <h1><a href="#">강성운</a></h1>
-            <p class="lawyer">변호사</p>
-            <p><a href="#"><span>T.</span> 02 6003 7591</a></p>
-            <P><a href="#"><span>E.</span> swkang@yoonyang.com</a></p>
-        </li>
-        <li>
-            <a href="#"><figure><img src="./images/7_photo_20170417091431.jpg" alt="img7"></figure></a>
-            <h1><a href="#">강승욱</a></h1>
-            <p class="lawyer">변호사</p>
-            <p><a href="#"><span>T.</span> 02 6182 8324</a></p>
-            <P><a href="#"><span>E.</span> kangsw@hwawoo.com</a></p>
-        </li>
-        <li>
-            <a href="#"><figure><img src="./images/8_photo_20170904093142.jpg" alt="img8"></figure></a>
-            <h1><a href="#">강영민</a></h1>
-            <p class="lawyer">변호사</p>
-            <p><a href="#"><span>T.</span> 02 6182 8555</a></p>
-            <P><a href="#"><span>E.</span> ymkang@yoonyang.com</a></p>
-        </li>
-        <li>
-            <a href="#"><figure><img src="./images/9_photo_20150323095709.jpg" alt="img9"></figure></a>
-            <h1><a href="#">강영호</a></h1>
-            <p class="lawyer">변호사</p>
-            <p><a href="#"><span>T.</span> 02 6003 7477</a></p>
-            <P><a href="#"><span>E.</span> yhk@hwawoo.com</a></p>
-        </li>
-        <li>
-            <a href="#"><figure><img src="./images/10_photo_20220421100402.jpg" alt="img10"></figure></a>
-            <h1><a href="#">강우진</a></h1>
-            <p class="lawyer">변호사</p>
-            <p><a href="#"><span>T.</span> 02 6182 8351</a></p>
-            <P><a href="#"><span>E.</span> wjkang@yoonyang.com</a></p>
-        </li>
-        <li>
-            <a href="#"><figure><img src="./images/11_photo_20200414010031.jpg" alt="img11"></figure></a>
-            <h1><a href="#">강찬</a></h1>
-            <p class="lawyer">변호사</p>
-            <p><a href="#"><span>T.</span> 02 6182 8516</a></p>
-            <P><a href="#"><span>E.</span> ckang@yoonyang.com</a></p>
-        </li>
-        <li>
-            <a href="#"><figure><img src="./images/12_photo_20160331041810.jpg" alt="img12"></figure></a>
-            <h1><a href="#">강철준</a></h1>
-            <p class="lawyer">변호사</p>
-            <p><a href="#"><span></span>T.02 6182 8145</a></p>
-            <P><a href="#"><span></span>E.cjkang@hwawoo.com</a></p>
-        </li>
-        <li>
-            <a href="#"><figure><img src="./images/13_photo_20200814040827.jpg" alt="img13"></figure></a>
-            <h1><a href="#">강현명</a></h1>
-            <p class="lawyer">변호사</p>
-            <p><a href="#"><span>T.</span> 02 6182 8719</a></p>
-            <P><a href="#"><span>E.</span> hmk@hwawoo.com</a></p>
-        </li>
-        <li>
-            <a href="#"><figure><img src="./images/14_photo_20150323095809.jpg" alt="img14"></figure></a>
-            <h1><a href="#">강혜림</a></h1>
-            <p class="lawyer">변호사</p>
-            <p><a href="#"><span>T.</span> 02 6182 8535</a></p>
-            <p><a href="#"><span>E.</span> hrkangyoonyang.com</a></p>
-        </li>
-        <li>
-            <a href="#"><figure><img src="./images/15_photo_20150323095835.jpg" alt="img15"></figure></a>
-            <h1><a href="#">강호순</a></h1>
-            <p class="lawyer">변호사</p>
-            <p><a href="#"><span>T.</span> 02 6003 7125</a></p>
-            <P><a href="#"><span>E.</span> hskang@hwawoo.com</a></p>
-        </li>
-      </ul>
-      </div><!--main introduce-->
-   
-    
-  
-    <div class="view_all">
-      <a href="#">
-        <i></i>
-        <p>더보기  </p>
-      </a>
-    </div>
-  </main>
-  </div><!--main_wrapper-->
-
+        <main>
+          <div class="main_wrapper">
+          <div class="main_introduce">
+            <ul class="contents_list">
+              <li>
+                <a href="#">
+                  <figure>
+                    <img src="./images/1_photo_20151106050544.jpg" alt="img1">
+                  </figure>
+                </a>
+                <h1>
+                  <a href="#">강동희</a>
+                </h1>
+                <p class="lawyer">변호사</p>
+                <p>
+                  <a href="#"><span>T.</span> 02 6182 8518</a>
+                </p>
+                <p>
+                  <a href="#"><span>E.</span> dhkang@yoonyang.com</a>
+                </p>
+              </li>
+              <li>
+                <a href="#">
+                  <figure>
+                    <img src="./images/2_photo_20160608102623.jpg" alt="img2">
+                  </figure>
+                </a>
+                <h1>
+                  <a href="#">강민화</a>
+                </h1>
+                <p class="lawyer">변호사</p>
+                <p>
+                  <a href="#"><span>T.</span> 02 6182 8344</a>
+                </p>
+                <p>
+                  <a href="#"><span>E.</span> minkang@hwawoo.com</a>
+                </p>
+              </li>
+              <li>
+                <a href="#">
+                  <figure>
+                    <img src="./images/3_photo_20180425060241.jpg" alt="img3">
+                  </figure>
+                </a>
+                <h1>
+                  <a href="#">강보라</a>
+                </h1>
+                <p class="lawyer">변호사</p>
+                <p>
+                  <a href="#"><span>T.</span> 02 6182 8166</a>
+                </p>
+                <p>
+                  <a href="#"><span>E.</span> brkang@yoonyang.com</a>
+                </p>
+              </li>
+              <li>
+                <a href="#">
+                  <figure>
+                    <img src="./images/4_photo_20220509101825.jpg" alt="img4">
+                  </figure>
+                </a>
+                <h1>
+                  <a href="#">강석준</a>
+                </h1>
+                <p class="lawyer">변호사</p>
+                <p>
+                  <a href="#"><span>T.</span> 02 6182 8505</a>
+                </p>
+                <p>
+                  <a href="#"><span>E.</span> kangsj@yoonyang.com</a>
+                </p>
+              </li>
+              <li>
+                <a href="#">
+                  <figure>
+                    <img src="./images/5_photo_20210422023606.jpg" alt="img5">
+                  </figure>
+                </a>
+                <h1>
+                  <a href="#">강성구</a>
+                </h1>
+                <p class="lawyer">변호사</p>
+                <p>
+                  <a href="#"><span>T. </span>02 6182 8336</a>
+                </p>
+                <p>
+                  <a href="#"><span>E. </span>kangsg@hwawoo.com</a>
+                </p>
+              </li>
+              <li>
+                <a href="#">
+                  <figure>
+                    <img src="./images/6_photo_20150323095638.jpg" alt="img6">
+                  </figure>
+                </a>
+                <h1>
+                  <a href="#">강성운</a>
+                </h1>
+                <p class="lawyer">변호사</p>
+                <p>
+                  <a href="#"><span>T.</span> 02 6003 7591</a>
+                </p>
+                <p>
+                  <a href="#"><span>E.</span> swkang@yoonyang.com</a>
+                </p>
+              </li>
+              <li>
+                <a href="#">
+                  <figure>
+                    <img src="./images/7_photo_20170417091431.jpg" alt="img7">
+                  </figure>
+                </a>
+                <h1>
+                  <a href="#">강승욱</a>
+                </h1>
+                <p class="lawyer">변호사</p>
+                <p>
+                  <a href="#"><span>T.</span> 02 6182 8324</a>
+                </p>
+                <p>
+                  <a href="#"><span>E.</span> kangsw@hwawoo.com</a>
+                </p>
+              </li>
+              <li>
+                <a href="#">
+                  <figure>
+                    <img src="./images/8_photo_20170904093142.jpg" alt="img8">
+                  </figure>
+                </a>
+                <h1>
+                  <a href="#">강영민</a>
+                </h1>
+                <p class="lawyer">변호사</p>
+                <p>
+                  <a href="#"><span>T.</span> 02 6182 8555</a>
+                </p>
+                <p>
+                  <a href="#"><span>E.</span> ymkang@yoonyang.com</a>
+                </p>
+              </li>
+              <li>
+                <a href="#">
+                  <figure>
+                    <img src="./images/9_photo_20150323095709.jpg" alt="img9">
+                  </figure>
+                </a>
+                <h1>
+                  <a href="#">강영호</a>
+                </h1>
+                <p class="lawyer">변호사</p>
+                <p>
+                  <a href="#"><span>T.</span> 02 6003 7477</a>
+                </p>
+                <p>
+                  <a href="#"><span>E.</span> yhk@hwawoo.com</a>
+                </p>
+              </li>
+              <li>
+                <a href="#">
+                  <figure>
+                    <img src="./images/10_photo_20220421100402.jpg" alt="img10">
+                  </figure>
+                </a>
+                <h1>
+                  <a href="#">강우진</a>
+                </h1>
+                <p class="lawyer">변호사</p>
+                <p>
+                  <a href="#"><span>T.</span> 02 6182 8351</a>
+                </p>
+                <p>
+                  <a href="#"><span>E.</span> wjkang@yoonyang.com</a>
+                </p>
+              </li>
+              <li>
+                <a href="#">
+                  <figure>
+                    <img src="./images/11_photo_20200414010031.jpg" alt="img11">
+                  </figure>
+                </a>
+                <h1>
+                  <a href="#">강찬</a>
+                </h1>
+                <p class="lawyer">변호사</p>
+                <p>
+                  <a href="#"><span>T.</span> 02 6182 8516</a>
+                </p>
+                <p>
+                  <a href="#"><span>E.</span> ckang@yoonyang.com</a>
+                </p>
+              </li>
+              <li>
+                <a href="#">
+                  <figure>
+                    <img src="./images/12_photo_20160331041810.jpg" alt="img12">
+                  </figure>
+                </a>
+                <h1>
+                  <a href="#">강철준</a>
+                </h1>
+                <p class="lawyer">변호사</p>
+                <p>
+                  <a href="#"><span></span>T.02 6182 8145</a>
+                </p>
+                <p>
+                  <a href="#"><span></span>E.cjkang@hwawoo.com</a>
+                </p>
+              </li>
+              <li>
+                <a href="#">
+                  <figure>
+                    <img src="./images/13_photo_20200814040827.jpg" alt="img13">
+                  </figure>
+                </a>
+                <h1>
+                  <a href="#">강현명</a>
+                </h1>
+                <p class="lawyer">변호사</p>
+                <p>
+                  <a href="#"><span>T.</span> 02 6182 8719</a>
+                </p>
+                <p>
+                  <a href="#"><span>E.</span> hmk@hwawoo.com</a>
+                </p>
+              </li>
+              <li>
+                <a href="#">
+                  <figure>
+                    <img src="./images/14_photo_20150323095809.jpg" alt="img14">
+                  </figure>
+                </a>
+                <h1>
+                  <a href="#">강혜림</a>
+                </h1>
+                <p class="lawyer">변호사</p>
+                <p>
+                  <a href="#"><span>T.</span> 02 6182 8535</a>
+                </p>
+                <p>
+                  <a href="#"><span>E.</span> hrkangyoonyang.com</a>
+                </p>
+              </li>
+              <li>
+                <a href="#">
+                  <figure>
+                    <img src="./images/15_photo_20150323095835.jpg" alt="img15">
+                  </figure>
+                </a>
+                <h1>
+                  <a href="#">강호순</a>
+                </h1>
+                <p class="lawyer">변호사</p>
+                <p>
+                  <a href="#"><span>T.</span> 02 6003 7125</a>
+                </p>
+                <p>
+                  <a href="#"><span>E.</span> hskang@hwawoo.com</a>
+                </p>
+              </li>
+            </ul>
+            <div id="more_btn">
+              <button type="button" class="circle_ani_btn">
+                <i></i>
+                더보기
+              </button>
+            </div>
+          </div><!--main introduce-->
+        </div>
+      </main>
+  </div><!--professionals_container-->
+</div>
    <!------------------footer--------------------->
     <!-- footer 영역 -->
 

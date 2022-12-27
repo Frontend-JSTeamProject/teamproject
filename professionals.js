@@ -1,7 +1,7 @@
 // header 스크롤하면 nav를 header로 이동
 const header = document.querySelector('header');
 const navList = document.querySelector('#header_nav_list');
-const solutionsWrapper = document.querySelector('.solutions_wrapper');
+const professionalContainer = document.querySelector('.professionals_container');
 
 let prevScroll = scrollY;
 console.log('prevScroll:', prevScroll);
@@ -31,13 +31,14 @@ const scrolled = () => {
 addEventListener('scroll', scrolled);
 
 addEventListener('scroll', () => {
-  let num = solutionsWrapper.offsetTop + 16;
+  let num = professionalContainer.offsetTop + 16;
   console.log('num:', num);
   if (scrollY <= num) {
     header.classList.remove('active');
     header.classList.remove('on');
   } else {
     header.classList.add('active');
+    header.style.backgroundColor = 'none';
   }
 });
 
@@ -72,6 +73,34 @@ addEventListener('wheel', e => {
   }
 });
 
+// search
+const serachPage = document.querySelector('.serch_wrap');
+const searchOpenIcon = document.querySelector('.header_search');
+const searchCloseIcon = document.querySelector('.search_box > .icon_close');
+const headerMenu = document.querySelector('header')
+const searchBox = document.querySelector('.search_box')
+const resetBtn = document.querySelector('.text_reset_icon');
+const inputBox = document.querySelector('#searchWord')
+
+searchOpenIcon.addEventListener('click', e => {
+  e.preventDefault();
+  serachPage.classList.add('open');
+  headerMenu.style.display='none';
+});
+searchCloseIcon.addEventListener('click', e => {
+  e.preventDefault();
+  serachPage.classList.remove('open');
+  headerMenu.style.display='flex';
+  searchBox.style.transition = '.1s';
+  serachPage.style.transition = '.1s';
+});
+inputBox.addEventListener('click', e => {
+  resetBtn.style.display='block';
+
+});
+
+
+
 // Main Sub-Menu Page
 const mainSubMenuPge = document.querySelector('.main_menu_page');
 const mainMenuOpenIcon = document.querySelector('#menu');
@@ -88,26 +117,13 @@ mainMenuCloseIcon.addEventListener('click', () => {
   body.classList.remove('no_scroll');
 });
 
-// solution 하위메뉴
-const solutionPop = document.querySelector('nav #nav_list .solution_pop');
 
-solutionPop.addEventListener('click', () => {
-  solutionPop.classList.toggle('active');
-});
-
-// 스크롤 내렸을 때 solution 하위메뉴
-const scrollSolutionPop = document.querySelector('header #header_nav_list .solution_pop');
-
-scrollSolutionPop.addEventListener('click', () => {
-  scrollSolutionPop.classList.toggle('active');
-});
-
-// view_all
+// 더보기
 const viewAllMoves = document.querySelectorAll(
-  '.view_all > a > i'
+  '#more_btn button'
 );
 const viewAllBtns = document.querySelectorAll(
-  ' .view_all > a > i'
+  '#more_btn button i'
 );
 
 // 마우스 올렸을 때
@@ -116,8 +132,8 @@ viewAllMoves.forEach(move => {
     viewAllBtns.forEach(el => {
       el.animate(
         {
-          transform: ['translateX(0)', 'translateX(0)', 'translateX(110px)'],
-          width: ['48px', '140px', '48px'],
+          transform: ['translateX(0)', 'translateX(0)', 'translateX(60px)'],
+          width: ['42px', '100px', '42px'],
         },
         {
           duration: 1000,
@@ -135,8 +151,8 @@ viewAllMoves.forEach(move => {
     viewAllBtns.forEach(el => {
       el.animate(
         {
-          transform: ['translateX(110px)', 'translateX(0)', 'translateX(0)'],
-          width: ['48px', '140px', '48px'],
+          transform: ['translateX(60px)', 'translateX(0)', 'translateX(0)'],
+          width: ['42px', '100px', '42px'],
         },
         {
           duration: 1000,
@@ -147,5 +163,3 @@ viewAllMoves.forEach(move => {
     });
   });
 });
-
-

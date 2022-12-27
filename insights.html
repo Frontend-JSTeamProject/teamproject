@@ -6,161 +6,544 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>법무법인 화우</title>
+  <!-- reset -->
   <link rel="stylesheet" href="./common/minireset.min.css">
-  <link rel="stylesheet" href="./insights.css">
-  <script defer src="./insights.js"></script>
+  <!-- font -->
   <link rel="stylesheet" href="./common/fonts.css">
+  <!-- style css -->
+  <link rel="stylesheet" href="./insights.css">
+  <!-- script -->
+  <script defer src="./insights.js"></script>
   
+  <!-- open graph -->
+  <meta property ="og:title" content="법무법인 화우">
+  <meta property ="og:url" content="https://frontend-jsteamproject.github.io/teamproject/insights.html">
+  <meta property ="og:image" content="./images/openGraph/openGraph.png">
+  <meta property ="og:description" content="최적의 솔루션을 제공합니다.">
+  <meta property ="og:type" content="website">
 
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./images/favicon_io/android-chrome-192x192.png" type="image/x-icon">
+  
 </head>
 
 <body>
+     <!-- 상단 헤더 메뉴 -->
+     <header>
+      <ul id="header_nav_list">
+        <li class="home">
+          <a href="./index.html">Home</a>
+        </li>
+        <li class="header_instights">
+          <a href="./insights.html" class="header_nav_insights">Insights</a>
+        </li>
+        <li class="header_nav_news">
+          <a href="#">뉴스</a>
+        </li>
+        <li class="insights_pop">
+          <div class="insights_pop_title">언론보도</div>
+          <ul id="header_insights_nav_list">
+            <li><a href="#" class="strong">언론보도</a></li>
+            <li><a href="#">세미나/이벤트</a></li>
+            <li><a href="#">화우소식</a></li>
+            <li><a href="#">최근업무사례</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="gnb_wrapper">
+        <h1><a href="./index.html"></a></h1>
 
-   
+        <div class="header_container_right">
+          <!-- 대메뉴 -->
+          <ul id="list">
+            <li><a href="./solutions.html">SOLUTIONS</a></li>
+            <li><a href="./professionals.html">PROFESSIONALS</a></li>
+            <li><a href="./insights.html">INSIGHTS</a></li>
+            <li><a href="./thefirm.html">THE FIRM</a></li>
+          </ul>
 
+          <!-- 상단 헤더 언어선택 메뉴 -->
 
-<!---------------------------------------------------------------------->
-  <div class="wrapper">
-    <main>
-      <nav>
-        <div class="introduce">
-          <a href="#">Home</a> · <a href="#">Insights</a> · <a href="#">뉴스</a>  &#160; <span>ㅡ</span> &#160; 
-          <a href="#" class="solution" id="btn">언론보도 &#160;<img src="./images/ico-arrow-down.svg" alt="방향"></a>
+          <div class="lang">
+            <div class="korean">KOR</div>
             <ul id="gnb">
-              <li><a href="#">언론보도</a></li>
-              <li><a href="#">세미나/이벤트</a></li>
-              <li><a href="#">화우소식</a></li>
-              <li><a href="#">최근업무사례</a></li>
+              <li><a href="#">KOR</a></li>
+              <li><a href="#">ENG</a></li>
+              <li><a href="#">CHN</a></li>
+              <li><a href="#">JPN</a></li>
             </ul>
+          </div>
+          <!-- 상단 헤더 아이콘  -->
+          <a href="#" class="header_map"></a>
+          <a href="#" class="header_search"></a>
+
+          <!--상단 헤더 햄버거 메뉴 아이콘-->
+          <a href="#" id="menu">
+            <span></span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+        <!-- Side Bar-->
+        <div class="side_bar">
+          <button type="button" class="side_bar_search">
+            <span><a href="./professionals.html">professionals</a></span>
+          </button>
+          <div class="side_Bar_util">
+            <button>
+              <span class="side_bar_icon">
+                <img src="./images/share.svg" alt="sns_icon">
+              </span>
+              <ul class="side_bar_hov_icon">
+                <li><a href="#" class="facebook_icon"></a></li>
+                <li><a href="#" class="twitter_icon"></a></li>
+              </ul>
+            </button>
+          </div>
+        </div>        
+
+        <!-- Main Sub-Menu Page-->
+    <div class="main_page">
+      <div class="main_menu_page">
+        <button class="icon_close">
+          <span>닫기</span>
+        </button>
+        <div class="gnb_menu_inner">
+          <h2 class="menu_logo">
+            <a href="#">법무법인</a>
+          </h2>
+          <ul class="gnb_main_menu">
+            <li>
+              <h2>solution</h2>
+              <ul id="gnb_main_submenu">
+                <li><a href="#">분야별</a></li>
+                <li><a href="#">산업별</a></li>
+                <li><a href="#">국가별</a></li>
+                <li><a href="#">센터</a></li>
+              </ul>
+            </li>
+            <li>
+              <h2>professionals</h2>
+              <ul id="gnb_main_submenu">
+                <li><a href="#">구성원 검색</a></li>
+              </ul>
+            </li>
+            <li>
+              <h2>insights</h2>
+              <ul id="gnb_main_submenu">
+                <li><a href="#">뉴스</a></li>
+                <li><a href="#">뉴스레터</a></li>
+                <li><a href="#">기고 및 연구자료</a></li>
+              </ul>
+            </li>
+            <li>
+              <h2>the firm</h2>
+              <ul id="gnb_main_submenu">
+                <li><a href="#">화우 소개</a></li>
+                <li><a href="#">연혁</a></li>
+                <li><a href="#">수상</a></li>
+                <li><a href="#">해외사무소</a></li>
+                <li><a href="#">사무소 위치</a></li>
+              </ul>
+            </li>
+            <li>
+              <h2>careers</h2>
+              <ul id="gnb_main_submenu">
+                <li><a href="#">영입안내</a></li>
+                <li><a href="#">영입공고</a></li>
+                <li><a href="#">지원하기</a></li>
+                <li><a href="#">직원채용</a></li>
+              </ul>
+            </li>
+            <li>
+              <h2>pro bono</h2>
+              <ul id="gnb_main_submenu">
+                <li><a href="#">법무법인 공익활동</a></li>
+                <li><a href="#">화우공익재단</a></li>
+              </ul>
+            </li>
+            <li>
+              <h2>family sites</h2>
+              <ul id="gnb_main_submenu">
+                <li><a href="#">특허법인 화우</a></li>
+                <li><a href="#">관세법인 화우</a></li>
+                <li><a href="#">세무법인 화우</a></li>
+                <li><a href="#">화우공익재단</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+ <!-- search -->
+ <form>
+  <div class="serch_wrap">
+    <a href="#">법무법인</a>
+    <div class="search_box">
+      <button class="icon_close"></button>
+      <div class="search_input_box">
+        <input type="text" placeholder="검색어를 입력해주세요" id="searchWord">
+        <button type="reset" class="text_reset_icon"></button>
+        <button class="search_icon_big"></button>
+      </div>
+    </div>
   </div>
-           <h1>언론보도<strong>.</strong></h1>
-      </nav>
-        <ul id="tab_menu">
+  </form>
+
+<!-------------------------------->
+  <div class="insights_container">
+    <div class="insights_wrapper">
+      <nav>
+        <div class="nav_wrapper">
+          <ul id="nav_list">
+            <li>
+              <a href="./index.html">Home</a>
+            </li>
+            <li>
+              <a href="./insights.html" class="nav_insights">Insights</a>
+            </li>
+            <li>
+              <a href="#" class="nav_news">뉴스</a>
+            </li>
+            <li class="insights_pop">
+              <div class="insights_pop_title">언론보도</div>
+              <ul id="insights_nav_list">
+                <li><a href="#" class="strong">언론보도</a></li>
+                <li><a href="#">세미나/이벤트</a></li>
+                <li><a href="#">화우소식</a></li>
+                <li><a href="#">최근업무사례</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <h1>언론보도</h1>
+          <ul id="tab_menu">
             <li id="tab1"><a href="#" class="subject">뉴스</a></li>
             <li id="tab2"><a href="#">뉴스레터</a></li>
             <li id="tab3"><a href="#">기고 및 연구자료</a></li> 
           </ul> 
 
-        <div class="search">
-      <form><select name="menu"> <!-- div#service_box, 1100 x 81.67, color: #555555, line-height: 18px -->
-      <option value="선택1" selected>전체</option>
-      <option value="선택2">제목</option>
-      <option value="선택3">내용</option>
-      <option value="선택3">출처</option>
-      </select><a href="#"><input type="text" placeholder="검색어를 입력해주세요"></a></form> 
-      </div>
-  
+          
+        </div>
+      </nav>
 
-                    <!--------------분야별------------------>    
+
+    <!-------------- main 분야별 -------------->  
+    <main>
     <div class="container">
-        <ul class="item">
-                  <li>
-                      <h1><a href="#">시세보다 싸게 팔았는데...증여세 안내는 사람들의 비밀</a></h1>
-                      <h2>법무법인 화우의 허시원 변호사가 기고한 상속·증여의 기술 칼럼이 머니투데이 the L에 게재되었습니다.</h2>
-                      <h3><a href="#">#자산관리(WM)</a></h3>
-                      <h4>머니투데이  &#124;  2022.12.17</h4>
-                  </li>
-                  <li>
-                    <h1><a href="#">"책임준공 미이행 책임 줄이려면 공사지연 사유 등 면책조항 추가를"</a></h1>
-                    <h2>화우가 개최한 '부실PF사업장 시공사 대응 세미나'의 주요 내용이 법조신문에 게재되었습니다.</h2>
-                    <h3><a href="#">#프로젝트 파이낸스·부동산금융 #프로젝트파이낸스</a></h3>
-                    <h4>법조신문  &#124;  2022.12.16</h4>
-                  </li>
-                  <li>
-                    <h1><a href="#">[해양수산법 판례여행 76]'수산업을 경영한 자'의 의미는?</a></h1>
-                    <h2>화우 김민경 변호사가 기고한 해양수산법 칼럼이 현대해양에 게재되었습니다.</h2>
-                    <h3><a href="#">#프로젝트 파이낸스·부동산금융 #프로젝트파이낸스</a></h3>
-                    <h4>현대해양  &#124;  2022.12.16</h4>
-                  </li>
-                  <li>
-                    <h1><a href="#">물순환 개선,도시침수 예방 등 다양한 효과 '공감대'</a></h1>
-                    <h2>화우 김도형 전문위원이 '도시기후탄력성 확보를 위한 물순환 개선 정책'토론회에 
-                      참여하였습니다.</h2>
-                    <h3><a href="#">환경</a></h3>
-                    <h4>에너지데일리  &#124;  2022.12.15</h4>
-                  </li>
-                  <li>
-                    <h1><a href="#">"부동산PF자금경색, 분양·임대료 채권 유동화로 대응해야"</a></h1>
-                    <h2>화우가 개최한 '부실PF사업장 시공사 대응 세미나'의 주요 내용이 서울경제에 게재되었습니다.</h2>
-                    <h3><a href="#">#프로젝트 파이낸스·부동산금융 #부동산금융·부동산투자</a></h3>
-                    <h4>서울경제  &#124;  2022.12.15</h4>
-                  </li>
-                  <li>
-                    <h1><a href="#">법무법인 화우,이글루코퍼레이션과 정보보호 업무협약</a></h1>
-                    <h2>화우가 이글루코퍼레이션과 법률자문·정보보호 서비스분야 협력을 위한 양해각서를 
-                      체결했습니다.</h2>
-                    <h3><a href="#">#정보보호센터</a></h3>
-                    <h4>한국경제 외 33건  &#124;  2022.12.15</h4>
-                  </li>
-                  <li>
-                    <h1><a href="#">"메타버스 윤리법칙"</a></h1>
-                    <h2>화우 이근우 변호사가 기고한 칼럼이 법률신문 Law&스마트에 게재되었습니다.</h2>
-                    <h3><a href="#">#TMT</a></h3>
-                    <h4>법률신문  &#124;  2022.12.15</h4>
-                  </li>
-                  <li>
-                    <h1><a href="#">파견법상 고용간주 또는 고용의무 규정에 대한 보호법익의 한계</a></h1>
-                    <h2>화우 양주열 변호사가 기고한 칼럼이 월간노동법률에 게재되었습니다.</h2>
-                    <h3><a href="#">#인사·노동</a></h3>
-                    <h4>월간노동법률  &#124;  2022.12.14</h4>
-                  </li>
-                  <li>
-                    <h1><a href="#">'금융명가'입지 다지는 화우</a></h1>
-                    <h2>금융명가로 알려진 화우 금융팀의 올해 활약이 리걸타임즈에 소개되었습니다.</h2>
-                    <h3><a href="#">#금융·자본시장</a></h3>
-                    <h4>리걸타임즈  &#124;  2022.12.14</h4>
-                  </li>
-                  <li>
-                    <h1><a href="#">[로펌이슈]화우,새 브랜딩 완료···4개국어 새 웹사이트 론칭</a></h1>
-                    <h2>화우가 새롭게 개편한 웹사이트를 론칭했습니다.</h2>
-                    <h4>뉴스핌 외 3건  &#124;  2022.12.13</h4>
-                  </li>
-                  <li>
-                    <h1><a href="#">STX중공업 하청업체ICC'강제 조인'판정 뒤집은 그 변호사 </a></h1>
-                    <h2>화우 김명안 미국변호사가 '제5회 대한민국 법무대상에서 중재대상을 수상했습니다.</h2>
-                    <h3><a href="#">#국제중재·국제소송</a></h3>
-                    <h4>머니투데이  &#124;  2022.12.13</h4>
-                  </li>
-                  <li>
-                    <h1><a href="#">금융·증권 수사대응 TF로 차별화···굵직한 사건 맡아온 '특수통' 영입</a></h1>
-                    <h2>화우 '금융·증권 수사대응 TF'의 활약이 동아일보에 게재되었습니다.</h2>
-                    <h3><a href="#">#금융·자본시장 #금융</a></h3>
-                    <h4>동아일보  &#124;  2022.12.12</h4>
-                  </li>
-              </ul>
-     </div>
+      <fieldset class="search">
+        <div class="search_wrapper">
+          <div class="select_box">
+            <select name="menu"> <!-- div#service_box, 1100 x 81.67, color: #555555, line-height: 18px -->
+              <option value="선택1">전체</option>
+              <option value="선택2">제목</option>
+              <option value="선택3">내용</option>
+              <option value="선택3">출처</option>
+            </select>
+          </div>
+          <div class="input_box">
+            <input type="text" placeholder="검색어를 입력해주세요">
+            <button type="button" class="search_icon"></button>
+          </div>
+        </div>
+      </fieldset>
+      <ul class="item">
+        <li class="board_box">
+          <a href="https://news.mt.co.kr/mtview.php?no=2022121610100636370" target="_blank">
+            <div class="card_txt_info">
+              <strong class="title">시세보다 싸게 팔았는데...증여세 안내는 사람들의 비밀</strong>
+              <p>법무법인 화우의 허시원 변호사가 기고한 상속·증여의 기술 칼럼이 머니투데이 the L에 게재되었습니다.</p>
+            </div>
+          </a>
+          <div class="box_util">
+            <ul class="list_hashtag">
+                <li>
+                  <a href="#">#자산관리(WM)</a>
+                </li>
+            </ul>
+            <ul class="list_util">
+              <li>머니투데이</li>
+              <li class="date">2022.12.17</li>
+            </ul>
+          </div>
+        </li>
+        <li class="board_box">
+          <a href="http://news.koreanbar.or.kr/news/articleView.html?idxno=26393" target="_blank">
+            <div class="card_txt_info">
+              <strong class="title">"책임준공 미이행 책임 줄이려면 공사지연 사유 등 면책조항 추가를"</strong>
+              <p>화우가 개최한 '부실PF사업장 시공사 대응 세미나'의 주요 내용이 법조신문에 게재되었습니다.</p>
+            </div>
+          </a>
+          <div class="box_util">
+            <ul class="list_hashtag">
+              <li>
+                <a href="#">#프로젝트 파이낸스·부동산금융</a>
+              </li>
+              <li>
+                <a href="#">#프로젝트파이낸스</a>
+              </li>
+            </ul>
+            <ul class="list_util">
+              <li>법조신문</li>
+              <li class="date">2022.12.16</li>
+            </ul>
+          </div>
+        </li>
+        <li class="board_box">
+          <a href="http://www.hdhy.co.kr/news/articleView.html?idxno=18012" target="_blank">
+            <div class="card_txt_info">
+              <strong class="title">[해양수산법 판례여행 76] '수산업을 경영한 자'의 의미는?</strong>
+              <p>화우 김민경 변호사가 기고한 해양수산법 칼럼이 현대해양에 게재되었습니다.</p>
+            </div>
+          </a>
+          <div class="box_util">
+            <ul class="list_hashtag">
+              <li>
+                <a href="#">#프로젝트 파이낸스·부동산금융</a>
+              </li>
+              <li>
+                <a href="#">#프로젝트파이낸스</a>
+              </li>
+            </ul>
+            <ul class="list_util">
+              <li>현대해양</li>
+              <li class="date">2022.12.16</li>
+            </ul>
+          </div>
+        </li>
+        <li class="board_box">
+          <a href="http://www.energydaily.co.kr/news/articleView.html?idxno=133306" target="_blank">
+            <div class="card_txt_info">
+              <strong class="title">물순환 개선, 도시침수 예방 등 다양한 효과 '공감대'</strong>
+              <p>화우 김도형 전문위원이 '도시기후탄력성 확보를 위한 물순환 개선 정책'토론회에 참여하였습니다.</p>
+            </div>
+          </a>
+          <div class="box_util">
+            <ul class="list_hashtag">
+                <li>
+                  <a href="#">#환경</a>
+                </li>
+            </ul>
+            <ul class="list_util">
+              <li>에너지데일리</li>
+              <li class="date">2022.12.15</li>
+            </ul>
+          </div>
+        </li>
+        <li class="board_box">
+          <a href="https://www.sedaily.com/NewsView/26EWW0LT1V" target="_blank">
+            <div class="card_txt_info">
+              <strong class="title">"부동산PF자금경색, 분양·임대료 채권 유동화로 대응해야"</strong>
+              <p>화우가 개최한 '부실PF사업장 시공사 대응 세미나'의 주요 내용이 서울경제에 게재되었습니다.</p>
+            </div>
+          </a>
+          <div class="box_util">
+            <ul class="list_hashtag">
+                <li>
+                  <a href="#">#프로젝트 파이낸스·부동산금융</a>
+                </li>
+                <li>
+                  <a href="#">#부동산금융·부동산투자</a>
+                </li>
+            </ul>
+            <ul class="list_util">
+              <li>서울경제</li>
+              <li class="date">2022.12.15</li>
+            </ul>
+          </div>
+        </li>
+        <li class="board_box">
+          <a href="https://www.hankyung.com/society/article/202212158193i" target="_blank">
+            <div class="card_txt_info">
+              <strong class="title">법무법인 화우,이글루코퍼레이션과 정보보호 업무협약</strong>
+              <p>화우가 이글루코퍼레이션과 법률자문·정보보호 서비스분야 협력을 위한 양해각서를 체결했습니다.</p>
+            </div>
+          </a>
+          <div class="box_util">
+            <ul class="list_hashtag">
+                <li>
+                  <a href="#">#정보보호센터</a>
+                </li>
+            </ul>
+            <ul class="list_util">
+              <li>한국경제 외 33건</li>
+              <li class="date">2022.12.15</li>
+            </ul>
+          </div>
+        </li>
+        <li class="board_box">
+          <a href="https://www.lawtimes.co.kr/Legal-Opinion/Legal-Opinion-View?serial=183750" target="_blank">
+            <div class="card_txt_info">
+              <strong class="title">"메타버스 윤리법칙"</strong>
+              <p>화우 이근우 변호사가 기고한 칼럼이 법률신문 Law&스마트에 게재되었습니다.</p>
+            </div>
+          </a>
+          <div class="box_util">
+            <ul class="list_hashtag">
+                <li>
+                  <a href="#">#TMT</a>
+                </li>
+            </ul>
+            <ul class="list_util">
+              <li>법률신문</li>
+              <li class="date">2022.12.15</li>
+            </ul>
+          </div>
+        </li>
+        <li class="board_box">
+          <a href="https://www.worklaw.co.kr/view/view.asp?accessSite=Naver&accessMethod=Search&accessMenu=News&in_cate=106&in_cate2=0&gopage=1&bi_pidx=35161" target="_blank">
+            <div class="card_txt_info">
+              <strong class="title">파견법상 고용간주 또는 고용의무 규정에 대한 보호법익의 한계</strong>
+              <p>화우 양주열 변호사가 기고한 칼럼이 월간노동법률에 게재되었습니다.</p>
+            </div>
+          </a>
+          <div class="box_util">
+            <ul class="list_hashtag">
+                <li>
+                  <a href="#">#인사·노동</a>
+                </li>
+            </ul>
+            <ul class="list_util">
+              <li>월간노동법률</li>
+              <li class="date">2022.12.14</li>
+            </ul>
+          </div>
+        </li>
+        <li class="board_box">
+          <a href="https://www.legaltimes.co.kr/news/articleView.html?idxno=69857" target="_blank">
+            <div class="card_txt_info">
+              <strong class="title">
+                '금융명가' 입지 다지는 화우
+              </strong>
+              <p>
+                금융명가로 알려진 화우 금융팀의 올해 활약이 리걸타임즈에 소개되었습니다.
+              </p>
+            </div>
+          </a>
+          <div class="box_util">
+            <ul class="list_hashtag">
+                <li>
+                  <a href="#">#금융·자본시장</a>
+                </li>
+            </ul>
+            <ul class="list_util">
+              <li>리걸타임즈</li>
+              <li class="date">2022.12.14</li>
+            </ul>
+          </div>
+        </li>
+        <li class="board_box">
+          <a href="https://www.newspim.com/news/view/20221213000275" target="_blank">
+            <div class="card_txt_info">
+              <strong class="title">
+                [로펌이슈] 화우,새 브랜딩 완료···4개국어 새 웹사이트 론칭
+              </strong>
+              <p>
+                화우가 새롭게 개편한 웹사이트를 론칭했습니다.
+              </p>
+            </div>
+          </a>
+          <div class="box_util">
+            <ul class="list_hashtag">
+            </ul>
+            <ul class="list_util">
+              <li>뉴스핌 외 3건</li>
+              <li class="date">2022.12.13</li>
+            </ul>
+          </div>
+        </li>
+        <li class="board_box">
+          <a href="https://news.mt.co.kr/mtview.php?no=2022121213014434996" target="_blank">
+            <div class="card_txt_info">
+              <strong class="title">
+                STX중공업 하청업체 ICC '강제 조인' 판정 뒤집은 그 변호사
+              </strong>
+              <p>
+                화우 김명안 미국변호사가 '제5회 대한민국 법무대상에서 중재대상을 수상했습니다.
+              </p>
+            </div>
+          </a>
+          <div class="box_util">
+            <ul class="list_hashtag">
+                <li>
+                  <a href="#">#국제중재·국제소송
+                  </a>
+                </li>
+            </ul>
+            <ul class="list_util">
+              <li>머니투데이</li>
+              <li class="date">2022.12.13</li>
+            </ul>
+          </div>
+        </li>
+        <li class="board_box">
+          <a href="https://www.donga.com/news/article/all/20221210/116937324/1" target="_blank">
+            <div class="card_txt_info">
+              <strong class="title">
+                금융·증권 수사대응 TF로 차별화···굵직한 사건 맡아온 '특수통' 영입
+              </strong>
+              <p>
+                화우 '금융·증권 수사대응 TF'의 활약이 동아일보에 게재되었습니다.
+              </p>
+            </div>
+          </a>
+          <div class="box_util">
+            <ul class="list_hashtag">
+                <li>
+                  <a href="#">#금융·자본시장
+                  </a>
+                </li>
+                <li>
+                  <a href="#">#금융</a>
+                </li>
+            </ul>
+            <ul class="list_util">
+              <li>동아일보</li>
+              <li class="date">2022.12.12</li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <div id="more_btn">
+        <button type="button" class="circle_ani_btn">
+          <i></i>
+          더보기
+        </button>
+      </div>
+    </div>
       <!--container-->    
-  </main>
+    </main>
+  </div>
 </div>
 
-<!------------------메인끝------------------------->
+<!-------메인끝-------->
 
-
-
-<!-----------------------footer---------------------------->
+<!-- footer 영역 -->
 <footer>
-  <h1><a href="#">↑</a></h1>
-<div class="mainfooter">
-    <div class="subcontainer">     
+  <div class="top_btn">
+    <h1><a href="#">↑</a></h1>
+  </div> 
+  <div class="mainfooter">
+     <div class="footer_box"><a href="#" id="top" class="top show"><!--<i class="fa-solid fa-arrow-up">--></i></a>
+     </div>
+     
+     <div class="subcontainer">      
       <div class="inner">
-        <ul>
-          <li><a href="#">#Seoul</a></li>
+       <ul>
+         <li><a href="#">#Seoul</a></li>
           <li><a href="#">#Tashkent</a></li>
           <li><a href="#">#Ho Chi Minh City</a></li>
           <li><a href="#">#Hanoi</a></li>
           <li><a href="#">#Jakarta</a></li>
         </ul>
       </div>
-      <!--inner-->
-      
-      
-       
+      <!--inner-->   
       <div class="footer_grid">
-        
         <ul class="footer_grid1">
           <li class="footerlogo"></li>
         </ul>
-
         <ul class="footer_grid2">
           <li class="family">Family Sites</li>
            <li><a href="#">특허법인화우</a></li>
@@ -171,9 +554,9 @@
 
         <ul class="footer_grid3">
             <li>서울시 강남구 영동대로 517 아셈타워 6,17,18,19,22,23,34층 </li>
-            <li><strong>Tel.</strong>&#160;&#160;02&#160;6003&#160;7000</li>
-            <li><strong>Fax.</strong>&#160;&#160;02&#160;6003&#160;7800</li>
-            <li><strong>E-mail.</strong>&#160;&#160;hwawoo@hawawoo.com</li> 
+            <li><strong>Tel.</strong> 02 6003 7000</li>
+            <li><strong>Fax.</strong> 02 6003 7800</li>
+            <li><strong>E-mail.</strong> hwawoo@hwawoo.com</li> 
         </ul>
 
         <ul class="footer_grid4">
@@ -186,25 +569,19 @@
         </ul>
 
         <ul class="footer_grid6">
-          <li>오시는길&#160;&#124;&#160;유한책임&#160;&#124;&#160;면책공고&#160;&#124;&#160;
-            개인정보 처리방침&#160;&#124;&#160;국제정보보호인증&#160;&#124;&#160;웹접근성
-          </li>
+          <li>오시는길</li>
+          <li>유한책임</li>
+          <li>면책공고</li>
+          <li>개인정보 처리방침</li>
+          <li>국제정보보호인증</li>
+          <li>웹접근성</li>
         </ul>
-        
-      
-      
     </div>
-     <!--footer_grid-->
-       
+     <!--footer_grid-->   
     </div>  
       <!--subcontainer-->
-
 </div>
   <!--mainfooter-->
-
-
 </footer>
-
 </body>
-
 </html>
